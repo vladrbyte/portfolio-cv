@@ -1,0 +1,556 @@
+{
+  "config": {
+    "languages": [
+      "de",
+      "en"
+    ],
+    "defaultLang": "de"
+  },
+  "profile": {
+    "name": "Vladyslav Loktev",
+    "headline": {
+      "de": "Lebenslauf",
+      "en": "Curriculum Vitae"
+    },
+    "address": "Giselastr. 1, 90441 Nürnberg",
+    "birthDate": "03.07.1987",
+    "birthPlace": "Dnipro/Ukraine",
+    "nationality": "Deutsch",
+    "contacts": [
+      {
+        "type": "phone",
+        "label": "01575 5437565",
+        "href": "tel:+49015755437565"
+      },
+      {
+        "type": "email",
+        "label": "vladyslavloktev@gmail.com",
+        "href": "mailto:vladyslavloktev@gmail.com"
+      },
+      {
+        "type": "github",
+        "label": "vladrbyte",
+        "href": "https://github.com/vladrbyte"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "career",
+      "label": {
+        "de": "Berufliche Laufbahn",
+        "en": "Career"
+      },
+      "depth": 3,
+      "items": [
+        {
+          "id": "career-01",
+          "title": "vjik.dev",
+          "meta": {
+            "period": "02.2025-jetzt"
+          },
+          "containers": [
+            {
+              "id": "career-01-role",
+              "title": {
+                "de": "App-Entwicklung",
+                "en": "App Development"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "career-02",
+          "title": {
+            "de": "Tani GmbH",
+            "en": "Tani GmbH"
+          },
+          "meta": {
+            "period": "04.2022-12.2024"
+          },
+          "containers": [
+            {
+              "id": "career-02-role",
+              "title": {
+                "de": "Fullstack Entwicklung",
+                "en": "Fullstack Development"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "career-03",
+          "title": {
+            "de": "Krola Consulting GmbH",
+            "en": "Krola Consulting GmbH"
+          },
+          "meta": {
+            "period": "06.2021-04.2022"
+          },
+          "containers": [
+            {
+              "id": "career-03-role",
+              "title": {
+                "de": "Frontend Entwicklung",
+                "en": "Frontend Development"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "career-04",
+          "title": {
+            "de": "DFK Nürnberg",
+            "en": "DFK Nuremberg"
+          },
+          "meta": {
+            "period": "03.2021-06.2021"
+          },
+          "containers": [
+            {
+              "id": "career-04-role",
+              "title": {
+                "de": "IT-Abteilung - intern",
+                "en": "IT Department - internal"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "career-05",
+          "title": {
+            "de": "LA Drucksofa",
+            "en": "LA Drucksofa"
+          },
+          "meta": {
+            "period": "01.2021-03.2021"
+          },
+          "containers": [
+            {
+              "id": "career-05-role",
+              "title": {
+                "de": "Fullstack Entwicklung",
+                "en": "Fullstack Development"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "career-06",
+          "title": {
+            "de": "Kleinoeder-Development",
+            "en": "Kleinoeder-Development"
+          },
+          "meta": {
+            "period": "02.2019–12.2019"
+          },
+          "containers": [
+            {
+              "id": "career-06-role",
+              "title": {
+                "de": "Praktikum als Web-und App Entwickler während die Ausbildungszeit",
+                "en": "Internship as Web and App Developer during the training period"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "career-07",
+          "title": {
+            "de": "Novasoft",
+            "en": "Novasoft"
+          },
+          "meta": {
+            "period": "05.2017-10.2017"
+          },
+          "containers": [
+            {
+              "id": "career-07-role",
+              "title": {
+                "de": "SEO – Marketing Abteilung - intern",
+                "en": "SEO – Marketing Department - internal"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "career-08",
+          "title": {
+            "de": "Autojack Nürnberg",
+            "en": "Autojack Nuremberg"
+          },
+          "meta": {
+            "period": "09.2014-02.2016"
+          },
+          "containers": [
+            {
+              "id": "career-08-role",
+              "title": {
+                "de": "Vertriebsmitarbeiter",
+                "en": "Sales Representative"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "career-09",
+          "title": {
+            "de": "Selbständige Tätigkeiten",
+            "en": "Freelance Activities"
+          },
+          "meta": {
+            "period": "04.2004-09.2014"
+          },
+          "containers": [
+            {
+              "id": "career-09-role",
+              "title": {
+                "de": "in Bereichen Beratung und Vertrieb",
+                "en": "in areas of consulting and sales"
+              },
+              "blocks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "academic",
+      "label": {
+        "de": "Akademische Laufbahn",
+        "en": "Academic Career"
+      },
+      "depth": 3,
+      "items": [
+        {
+          "id": "academic-01",
+          "title": {
+            "de": "IU Akademie",
+            "en": "IU Academy"
+          },
+          "meta": {
+            "period": "22.12.2025-19.06.2026"
+          },
+          "containers": [
+            {
+              "id": "academic-01-degree",
+              "title": {
+                "de": "AI Engineering and Voice Assistent",
+                "en": "AI Engineering and Voice Assistent"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "academic-02",
+          "title": {
+            "de": "Lutz&Grub AG Nürnberg",
+            "en": "Lutz&Grub AG Nuremberg"
+          },
+          "meta": {
+            "period": "11.2017-12.2020"
+          },
+          "containers": [
+            {
+              "id": "academic-02-degree",
+              "title": {
+                "de": "Ausbildung: Fachinformatiker Anwendungsentwicklung bei Lutz&Grub AG Nürnberg. IHK-Abschluss",
+                "en": "Training: IT specialist for software development at Lutz&Grub AG Nuremberg. IHK degree"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "academic-03",
+          "title": {
+            "de": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+            "en": "Friedrich-Alexander University Erlangen-Nuremberg"
+          },
+          "meta": {
+            "period": "10.2010-02.2012"
+          },
+          "containers": [
+            {
+              "id": "academic-03-degree",
+              "title": {
+                "de": "Studiengänge: Rechtswissenschaft, Geschichte",
+                "en": "Fields of study: Law, History"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "academic-04",
+          "title": {
+            "de": "Abendgymnasium Nürnberg",
+            "en": "Abendgymnasium Nuremberg"
+          },
+          "meta": {
+            "period": "09.2007-06.2010"
+          },
+          "containers": [
+            {
+              "id": "academic-04-degree",
+              "title": {
+                "de": "Abitur",
+                "en": "Abitur (High School Diploma)"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "academic-05",
+          "title": {
+            "de": "Hans-Böckler Realschule",
+            "en": "Hans-Böckler Realschule"
+          },
+          "meta": {
+            "period": "09.2006-06.2007"
+          },
+          "containers": [
+            {
+              "id": "academic-05-degree",
+              "title": {
+                "de": "Mittlere Reife",
+                "en": "Intermediate School Certificate"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "academic-06",
+          "title": {
+            "de": "Helene-Lange-Gymnasium",
+            "en": "Helene-Lange-Gymnasium"
+          },
+          "meta": {
+            "period": "09.2003-07.2006"
+          },
+          "containers": [
+            {
+              "id": "academic-06-degree",
+              "title": {
+                "de": "Gymnasiale Ausbildung",
+                "en": "High School Education"
+              },
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "id": "academic-07",
+          "title": {
+            "de": "Mittlere Schule N144 Stadt Dnipro/Ukraine",
+            "en": "Secondary School No. 144, Dnipro City/Ukraine"
+          },
+          "meta": {
+            "period": "09.1994-06.2003"
+          },
+          "containers": [
+            {
+              "id": "academic-07-degree",
+              "title": {
+                "de": "Schulausbildung",
+                "en": "School Education"
+              },
+              "blocks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "label": {
+        "de": "Kenntnisse & Fähigkeiten",
+        "en": "Skills & Abilities"
+      },
+      "depth": 2,
+      "items": [
+        {
+          "id": "skill-ai",
+          "title": {
+            "de": "IT-Fähigkeit",
+            "en": "IT Capability"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "KI Systemen"
+            }
+          ]
+        },
+        {
+          "id": "skill-markup",
+          "title": {
+            "de": "Markup Sprachen",
+            "en": "Markup Languages"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "HTML, Ionic, Quasar, XML"
+            }
+          ]
+        },
+        {
+          "id": "skill-stylesheet",
+          "title": {
+            "de": "Stylesheet",
+            "en": "Stylesheet"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "CSS, SCSS, Bootstrap, ZURB"
+            }
+          ]
+        },
+        {
+          "id": "skill-scripting",
+          "title": {
+            "de": "Scriptsprachen",
+            "en": "Scripting Languages"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "JavaScript, Python, PHP, C, Dart, Kotlin"
+            }
+          ]
+        },
+        {
+          "id": "skill-frameworks",
+          "title": {
+            "de": "Frameworks",
+            "en": "Frameworks"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "JQuery, Angular, Typescript, Vue.js, React, Next.js, Node.js, WP, Redux, Jetpack Compose, Flutter, Gradio"
+            }
+          ]
+        },
+        {
+          "id": "skill-dotnet",
+          "title": {
+            "de": ".NET",
+            "en": ".NET"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "C#, WSP, ASP"
+            }
+          ]
+        },
+        {
+          "id": "skill-databases",
+          "title": {
+            "de": "Datenbanken",
+            "en": "Databases"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "SQL, MySQL, MongoDB"
+            }
+          ]
+        },
+        {
+          "id": "skill-office",
+          "title": {
+            "de": "Office-Anwendungen",
+            "en": "Office Applications"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "Microsoft: Word, PowerPoint, SharePoint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leisure",
+      "label": {
+        "de": "Freizeit & Hobby",
+        "en": "Leisure & Hobby"
+      },
+      "depth": 2,
+      "items": [
+        {
+          "id": "leisure-hobby",
+          "title": {
+            "de": "Hobby",
+            "en": "Hobby"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "Pub-Quiz"
+            },
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "MTG, D&D"
+            }
+          ]
+        },
+        {
+          "id": "leisure-freizeit",
+          "title": {
+            "de": "Freizeit",
+            "en": "Leisure"
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "Orga-Team Ostanders-Festival"
+            },
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "Moderation von Russian Poetry Slam"
+            },
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "Unterrichten bei Chabad Nürnberg für Senioren und Jugendlichen"
+            },
+            {
+              "type": "text",
+              "lang": "de",
+              "value": "und viel mehr"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

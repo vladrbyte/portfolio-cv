@@ -1,0 +1,267 @@
+{
+  "bio": {
+    "title": {
+      "de": "Über mich",
+      "en": "About me"
+    },
+    "paragraphs": [
+      {
+        "de": "Ich bin ein erfahrener Entwickler mit einem soliden Hintergrund in der Anwendungs- und Fullstack-Entwicklung. Mein Fokus liegt auf modernen Webtechnologien, mobilen Anwendungen und Systemen der künstlichen Intelligenz.",
+        "en": "I am an experienced developer with a solid background in application and full-stack development. My focus is on modern web technologies, mobile applications, and artificial intelligence systems."
+      },
+      {
+        "de": "In meiner Freizeit engagiere ich mich aktiv im Orga-Team des Ostanders-Festivals, moderiere den Russian Poetry Slam und unterrichte bei Chabad Nürnberg für Senioren und Jugendliche. Zu meinen Hobbys gehören außerdem Pub-Quizzes, Magic: The Gathering (MTG) und Dungeons & Dragons (D&D).",
+        "en": "In my free time, I am actively involved in the organizing team of the Ostanders Festival, host the Russian Poetry Slam, and teach seniors and youth at Chabad Nuremberg. My hobbies also include pub quizzes, Magic: The Gathering (MTG), and Dungeons & Dragons (D&D)."
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "company": {
+        "de": "KAJ Nürnberg",
+        "en": "KAJ Nuremberg"
+      },
+      "period": "02.2025 - jetzt",
+      "position": {
+        "de": "App-Entwicklung",
+        "en": "App Development"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    },
+    {
+      "id": 2,
+      "company": {
+        "de": "Tani GmbH",
+        "en": "Tani GmbH"
+      },
+      "period": "04.2022 - 12.2024",
+      "position": {
+        "de": "Fullstack Entwicklung",
+        "en": "Fullstack Development"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    },
+    {
+      "id": 3,
+      "company": {
+        "de": "Krola Consulting GmbH",
+        "en": "Krola Consulting GmbH"
+      },
+      "period": "06.2021 - 04.2022",
+      "position": {
+        "de": "Frontend Entwicklung",
+        "en": "Frontend Development"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    },
+    {
+      "id": 4,
+      "company": {
+        "de": "DFK Nürnberg",
+        "en": "DFK Nuremberg"
+      },
+      "period": "03.2021 - 06.2021",
+      "position": {
+        "de": "IT-Abteilung - intern",
+        "en": "IT Department - internal"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    },
+    {
+      "id": 5,
+      "company": {
+        "de": "LA Drucksofa",
+        "en": "LA Drucksofa"
+      },
+      "period": "01.2021 - 03.2021",
+      "position": {
+        "de": "Fullstack Entwicklung",
+        "en": "Fullstack Development"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    },
+    {
+      "id": 6,
+      "company": {
+        "de": "Kleinoeder-Development",
+        "en": "Kleinoeder-Development"
+      },
+      "period": "02.2019 - 12.2019",
+      "position": {
+        "de": "Praktikum als Web- und App Entwickler während der Ausbildungszeit",
+        "en": "Internship as a Web and App Developer during the training period"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    },
+    {
+      "id": 7,
+      "company": {
+        "de": "Novasoft",
+        "en": "Novasoft"
+      },
+      "period": "05.2017 - 10.2017",
+      "position": {
+        "de": "SEO – Marketing Abteilung - intern",
+        "en": "SEO – Marketing Department - internal"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    },
+    {
+      "id": 8,
+      "company": {
+        "de": "Autojack Nürnberg",
+        "en": "Autojack Nuremberg"
+      },
+      "period": "09.2014 - 02.2016",
+      "position": {
+        "de": "Vertriebsmitarbeiter",
+        "en": "Sales Representative"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    },
+    {
+      "id": 9,
+      "company": {
+        "de": "Selbständige Tätigkeiten",
+        "en": "Freelance Activities"
+      },
+      "period": "04.2004 - 09.2014",
+      "position": {
+        "de": "Bereiche: Beratung und Vertrieb",
+        "en": "Consulting and Sales"
+      },
+      "description": {
+        "de": "",
+        "en": ""
+      },
+      "projects": []
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": {
+        "de": "IU Akademie",
+        "en": "IU Academy"
+      },
+      "period": "22.12.2025 - 19.06.2026",
+      "degree": {
+        "de": "AI Engineering und Sprachassistenten",
+        "en": "AI Engineering and Voice Assistant"
+      }
+    },
+    {
+      "id": 2,
+      "institution": {
+        "de": "Lutz&Grub AG Nürnberg",
+        "en": "Lutz&Grub AG Nuremberg"
+      },
+      "period": "11.2017 - 12.2020",
+      "degree": {
+        "de": "Ausbildung: Fachinformatiker Anwendungsentwicklung (IHK-Abschluss)",
+        "en": "IT Specialist for Software Development (IHK Degree)"
+      }
+    },
+    {
+      "id": 3,
+      "institution": {
+        "de": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+        "en": "Friedrich-Alexander University Erlangen-Nuremberg"
+      },
+      "period": "10.2010 - 02.2012",
+      "degree": {
+        "de": "Studiengänge: Rechtswissenschaft, Geschichte",
+        "en": "Fields of study: Law, History"
+      }
+    },
+    {
+      "id": 4,
+      "institution": {
+        "de": "Abendgymnasium Nürnberg",
+        "en": "Abendgymnasium Nuremberg"
+      },
+      "period": "09.2007 - 06.2010",
+      "degree": {
+        "de": "Abitur",
+        "en": "Abitur (High School Diploma)"
+      }
+    },
+    {
+      "id": 5,
+      "institution": {
+        "de": "Hans-Böckler Realschule",
+        "en": "Hans-Böckler Realschule"
+      },
+      "period": "09.2006 - 06.2007",
+      "degree": {
+        "de": "Mittlere Reife",
+        "en": "Intermediate School Certificate"
+      }
+    },
+    {
+      "id": 6,
+      "institution": {
+        "de": "Helene-Lange-Gymnasium",
+        "en": "Helene-Lange-Gymnasium"
+      },
+      "period": "09.2003 - 07.2006",
+      "degree": {
+        "de": "Gymnasiale Ausbildung",
+        "en": "High School Education"
+      }
+    },
+    {
+      "id": 7,
+      "institution": {
+        "de": "Mittlere Schule N144 Stadt Dnipro/Ukraine",
+        "en": "Secondary School No. 144, Dnipro City/Ukraine"
+      },
+      "period": "09.1994 - 06.2003",
+      "degree": {
+        "de": "Schulausbildung",
+        "en": "School Education"
+      }
+    }
+  ],
+  "skills": {
+    "markup": ["HTML", "Ionic", "Quasar", "XML"],
+    "stylesheet": ["CSS", "SCSS", "Bootstrap", "ZURB"],
+    "scripting": ["JavaScript", "Python", "PHP", "C", "Dart", "Kotlin"],
+    "frameworks": ["JQuery", "Angular", "TypeScript", "Vue.js", "React", "Next.js", "Node.js", "WP", "Redux", "Jetpack Compose", "Flutter", "Gradio"],
+    "dotNet": ["C#", "WSP", "ASP"],
+    "databases": ["SQL", "MySQL", "MongoDB"]
+  }
+}

@@ -1,0 +1,22 @@
+:root {
+    --dossier-bg: #f9f8f6;
+    --dossier-card-bg: #ffffff;
+    --dossier-text: #2c2c2e;
+    --dossier-heading: #111113;
+    --dossier-accent: #6366f1;
+    --dossier-border: #e2e8f0;
+    --dossier-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --dossier-radius: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dossier-bg: #0f1117;
+        --dossier-card-bg: #1a1d24;
+        --dossier-text: #9ca3af;
+        --dossier-heading: #f3f4f6;
+        --dossier-accent: #818cf8;
+        --dossier-border: #2d3748;
+        --dossier-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+}
