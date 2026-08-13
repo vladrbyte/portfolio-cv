@@ -1,6 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useCv } from '../../composables/useCv'
 import './style.css'
+
 const props = defineProps({
   cv: {
     type: Object,
@@ -8,27 +10,28 @@ const props = defineProps({
   }
 })
 
-const currentLang = ref(props.cv.config?.defaultLang || 'de')
-const languages = props.cv.config?.languages || ['de', 'en']
+// Подключаем ваш рабочий useCv
+const { currentLang, languages, profile, sections } = useCv(props.cv)
 
-const sections = props.cv.sections || []
-const activeSectionId = ref(sections[0]?.id || '')
+// Управление активной секцией
+const activeSectionId = ref(sections.value[0]?.id || '')
 
 const activeSection = computed(() => {
-  return sections.find(s => s.id === activeSectionId.value) || sections[0]
+  return sections.value.find(s => s.id === activeSectionId.value) || sections.value[0]
 })
 </script>
 
 <template>
   <div class="dossier-container">
-    <!-- Шапка / Верхняя панель -->
+    
+    <!-- ШАПКА: Профиль и Переключатель языков -->
     <header class="dossier-header">
-      <div class="profile-summary" v-if="cv.profile">
-        <h1>{{ cv.profile.name }}</h1>
-        <p class="headline">{{ cv.profile.headline?.[currentLang] }}</p>
+      <div class="profile-summary">
+        <h1 v-if="profile.fullname">{{ profile.fullname }}</h1>
+        <p v-if="profile.headline" class="headline">{{ profile.headline }}</p>
       </div>
 
-      <div class="controls">
+      <div v-if="languages.length" class="controls">
         <select v-model="currentLang" class="lang-select">
           <option v-for="lang in languages" :key="lang" :value="lang">
             {{ lang.toUpperCase() }}
@@ -37,9 +40,9 @@ const activeSection = computed(() => {
       </div>
     </header>
 
-    <!-- Основной макет: Спайн (навигация) + Контент -->
     <div class="dossier-layout">
-      <nav class="dossier-spine" aria-label="Sections Navigation">
+      <!-- БОКОВАЯ НАВИГАЦИЯ (Спина досье) -->
+      <nav class="dossier-spine" aria-label="Секции">
         <ul>
           <li v-for="section in sections" :key="section.id">
             <button
@@ -47,38 +50,51 @@ const activeSection = computed(() => {
               :class="{ active: activeSectionId === section.id }"
               @click="activeSectionId = section.id"
             >
-              {{ section.label?.[currentLang] }}
+              {{ section.label }}
             </button>
           </li>
         </ul>
       </nav>
 
-      <main class="dossier-main" v-if="activeSection">
-        <h2>{{ activeSection.label?.[currentLang] }}</h2>
+      <!-- ОСНОВНОЙ БЛОК -->
+      <main v-if="activeSection" class="dossier-main">
+        <h2>{{ activeSection.label }}</h2>
 
         <div class="items-list">
-          <div v-for="item in activeSection.items" :key="item.id" class="dossier-card">
-            <div class="card-header">
-              <h3 class="item-title">{{ item.title?.[currentLang] }}</h3>
-              <span v-if="item.meta?.period" class="item-period">{{ item.meta.period }}</span>
+          <div
+            v-for="item in activeSection.items"
+            :key="item.id"
+            class="dossier-card"
+          >
+            <!-- 1. Фиксированная шапка карточки для красивого Flex-расположения Title + Period -->
+            <div class="card-header" v-if="item.title || item.period">
+              <h3 v-if="item.title" class="item-title">{{ item.title }}</h3>
+              <span v-if="item.period" class="item-period">{{ item.period }}</span>
             </div>
 
-            <!-- Контейнеры/Роли -->
-            <div v-if="item.containers && item.containers.length" class="containers-list">
-              <div v-for="cont in item.containers" :key="cont.id" class="container-item">
-                <p class="role-title">{{ cont.title?.[currentLang] }}</p>
-              </div>
-            </div>
+            <!-- 2. Динамический вышив всех остальных полей (subtitle, description, bullets, entries и т.д.) -->
+            <template v-for="(val, key) in item" :key="key">
+              <template v-if="!['id', 'title', 'period'].includes(key) && val && (Array.isArray(val) ? val.length : true)">
 
-            <!-- Блоки (для навыков и хобби) -->
-            <div v-if="item.blocks && item.blocks.length" class="blocks-list">
-              <div v-for="(block, bIdx) in item.blocks" :key="bIdx" class="block-item">
-                <span>{{ block.value }}</span>
-              </div>
-            </div>
+                <!-- Список (bullets-list, entries-list и т.д.) -->
+                <ul v-if="Array.isArray(val)" :class="`${key}-list`">
+                  <li v-for="(entry, idx) in val" :key="idx">
+                    {{ entry }}
+                  </li>
+                </ul>
+
+                <!-- Обычная строка (item-subtitle, item-description и т.д.) -->
+                <div v-else :class="`item-${key}`">
+                  {{ val }}
+                </div>
+
+              </template>
+            </template>
+
           </div>
         </div>
       </main>
     </div>
+
   </div>
 </template>
