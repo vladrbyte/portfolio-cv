@@ -1,14 +1,22 @@
-.dossier-container {
+/* Dossier Theme Styles */
+
+.theme-dossier {
+    min-height: 100vh;
+    background-color: var(--dossier-bg);
+    color: var(--dossier-text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+.theme-dossier .cv-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 24px;
-    background-color: var(--dossier-bg);
-    color: var(--dossier-text);
-    min-height: 100vh;
     box-sizing: border-box;
 }
 
-.dossier-header {
+/* Header */
+.theme-dossier .cv-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,40 +25,51 @@
     padding-bottom: 16px;
 }
 
-.profile-summary h1 {
+.theme-dossier .cv-profile-summary.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.theme-dossier .cv-profile-summary h1 {
     margin: 0;
     font-size: 28px;
+    font-weight: 700;
     color: var(--dossier-heading);
 }
 
-.headline {
+.theme-dossier .cv-headline {
     margin: 4px 0 0;
     font-size: 14px;
     opacity: 0.8;
 }
 
-.lang-select {
+.theme-dossier .cv-lang-select {
     padding: 6px 12px;
     border-radius: 8px;
     border: 1px solid var(--dossier-border);
     background: var(--dossier-card-bg);
     color: var(--dossier-text);
     cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.dossier-layout {
+/* Layout: Spine + Main */
+.theme-dossier .cv-layout {
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 240px minmax(0, 1fr);
     gap: 24px;
+    align-items: start;
 }
 
 @media (max-width: 768px) {
-    .dossier-layout {
+    .theme-dossier .cv-layout {
         grid-template-columns: 1fr;
     }
 }
 
-.dossier-spine ul {
+/* Navigation (Spine) */
+.theme-dossier .cv-nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -59,7 +78,7 @@
     gap: 8px;
 }
 
-.spine-tab {
+.theme-dossier .cv-nav-tab {
     width: 100%;
     text-align: left;
     padding: 12px 16px;
@@ -68,15 +87,18 @@
     background: transparent;
     color: var(--dossier-text);
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 500;
     transition: all 0.2s ease;
+    box-sizing: border-box;
+    word-break: break-word;
 }
 
-.spine-tab:hover {
+.theme-dossier .cv-nav-tab:hover {
     background: var(--dossier-border);
 }
 
-.spine-tab.active {
+.theme-dossier .cv-nav-tab.active {
     background: var(--dossier-card-bg);
     color: var(--dossier-heading);
     border-color: var(--dossier-border);
@@ -84,7 +106,8 @@
     font-weight: 600;
 }
 
-.dossier-main {
+/* Main Content Area */
+.theme-dossier .cv-main {
     background: var(--dossier-card-bg);
     border-radius: var(--dossier-radius);
     padding: 24px;
@@ -92,70 +115,125 @@
     box-shadow: var(--dossier-shadow);
 }
 
-.dossier-main h2 {
+.theme-dossier .cv-section-heading {
     margin-top: 0;
     font-size: 20px;
+    font-weight: 600;
     color: var(--dossier-heading);
     margin-bottom: 20px;
     border-bottom: 1px solid var(--dossier-border);
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 }
 
-.items-list {
+.theme-dossier .cv-items-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.dossier-card {
+/* Card Common */
+.theme-dossier .cv-card {
     padding: 16px;
     border-radius: 12px;
     background: var(--dossier-bg);
     border: 1px solid var(--dossier-border);
 }
 
-.card-header {
+/* Section Card */
+.theme-dossier .cv-card-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 12px;
+    margin-bottom: 8px;
 }
 
-.item-title {
+.theme-dossier .cv-item-title {
     margin: 0;
     font-size: 16px;
+    font-weight: 600;
     color: var(--dossier-heading);
 }
 
-.item-period {
+.theme-dossier .cv-item-subtitle {
+    margin: 2px 0 0;
     font-size: 13px;
+    color: var(--dossier-text);
+    opacity: 0.85;
+}
+
+.theme-dossier .cv-item-period {
+    font-size: 12px;
     padding: 2px 8px;
     border-radius: 6px;
     background: var(--dossier-border);
     white-space: nowrap;
+    font-weight: 500;
 }
 
-.containers-list {
-    margin-top: 8px;
-}
-
-.role-title {
-    margin: 0;
+.theme-dossier .cv-item-description {
+    margin: 8px 0 0;
     font-size: 14px;
+    line-height: 1.5;
+}
+
+.theme-dossier .cv-item-bullets {
+    margin: 10px 0 0;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.theme-dossier .cv-item-bullets li {
+    margin-bottom: 4px;
+}
+
+/* Profile Card */
+.theme-dossier .cv-profile-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.theme-dossier .cv-profile-row {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.theme-dossier .cv-profile-label {
+    font-weight: 600;
+    color: var(--dossier-heading);
+    min-width: 150px;
+}
+
+.theme-dossier .cv-profile-value {
     color: var(--dossier-text);
 }
 
-.blocks-list {
-    margin-top: 8px;
+.theme-dossier .cv-profile-contacts {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--dossier-border);
 }
 
-.block-item {
-    font-size: 13px;
-    padding: 4px 10px;
+.theme-dossier .cv-contact-chip a,
+.theme-dossier .cv-contact-chip span {
+    display: inline-block;
+    padding: 6px 12px;
     border-radius: 6px;
-    background: var(--dossier-card-bg);
-    border: 1px solid var(--dossier-border);
+    background: var(--dossier-border);
+    color: var(--dossier-heading);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.theme-dossier .cv-contact-chip a:hover {
+    opacity: 0.8;
 }

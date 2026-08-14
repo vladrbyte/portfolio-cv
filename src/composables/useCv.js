@@ -1,69 +1,122 @@
 import { ref, computed } from 'vue'
 
 export function useCv(cvData) {
-    const languages = computed(() => {
-        const configLangs = cvData?.config?.languages
-        return Array.isArray(configLangs) && configLangs.length > 0 ? configLangs : []
-    })
+	// 1. Конфигурация языков из config
+	const languages = computed(() => {
+		const configLangs = cvData?.config?.languages
+		return Array.isArray(configLangs) && configLangs.length > 0 ? configLangs : []
+	})
 
-    const defaultLang = computed(() => {
-        return cvData?.config?.defaultLang || languages.value[0] || ''
-    })
+	const defaultLang = computed(() => {
+		return cvData?.config?.defaultLang || languages.value[0] || ''
+	})
 
-    const currentLang = ref(defaultLang.value)
+	const currentLang = ref(defaultLang.value)
+	const theme = computed(() => cvData?.config?.theme || 'dossier')
 
-    const t = (field) => {
-        if (!field) return ''
-        if (typeof field === 'string' || typeof field === 'number') return field
+	// 2. Универсальная функция перевода / фолбэка
+	const t = (field) => {
+		if (field === null || field === undefined) return ''
+		if (typeof field === 'string' || typeof field === 'number') return field
 
-        if (typeof field === 'object' && !Array.isArray(field)) {
-            if (currentLang.value && field[currentLang.value]) return field[currentLang.value]
-            if (defaultLang.value && field[defaultLang.value]) return field[defaultLang.value]
-            const values = Object.values(field)
-            return values.length > 0 ? values[0] : ''
-        }
+		if (typeof field === 'object' && !Array.isArray(field)) {
+			if (currentLang.value && field[currentLang.value] !== undefined) {
+				return field[currentLang.value]
+			}
+			if (defaultLang.value && field[defaultLang.value] !== undefined) {
+				return field[defaultLang.value]
+			}
+			const values = Object.values(field)
+			return values.length > 0 ? values[0] : ''
+		}
 
-        if (Array.isArray(field)) return field
-        return ''
-    }
+		if (Array.isArray(field)) return field
+		return ''
+	}
 
-    const processDynamic = (data) => {
-        if (!data) return data
-        if (typeof data !== 'object') return data
+	// 3. Рекурсивная динамическая обработка структур данных
+	const processDynamic = (data) => {
+		if (!data) return data
+		if (typeof data !== 'object') return data
 
-        if (Array.isArray(data)) {
-            return data.map(item => processDynamic(item))
-        }
+		if (Array.isArray(data)) {
+			return data.map(item => processDynamic(item))
+		}
 
-        const keys = Object.keys(data)
-        const isTranslationObj = keys.length > 0 && keys.every(k => languages.value.includes(k))
-        if (isTranslationObj) {
-            return t(data)
-        }
+		const keys = Object.keys(data)
+		// Проверяем, является ли объект словарем переводов (все ключи есть в languages)
+		const isTranslationObj = languages.value.length > 0 &&
+			keys.length > 0 &&
+			keys.every(k => languages.value.includes(k))
 
-        const result = {}
-        for (const [key, value] of Object.entries(data)) {
-            if (Array.isArray(value)) {
-                result[key] = value.map(val => processDynamic(val))
-            } else if (typeof value === 'object' && value !== null) {
-                result[key] = processDynamic(value)
-            } else {
-                result[key] = value
-            }
-        }
+		if (isTranslationObj) {
+			return t(data)
+		}
 
-        return result
-    }
+		const result = {}
+		for (const [key, value] of Object.entries(data)) {
+			if (Array.isArray(value)) {
+				result[key] = value.map(val => processDynamic(val))
+			} else if (typeof value === 'object' && value !== null) {
+				result[key] = processDynamic(value)
+			} else {
+				result[key] = value
+			}
+		}
 
-    const profile = computed(() => processDynamic(cvData?.profile || {}))
-    const sections = computed(() => processDynamic(cvData?.sections || []))
+		return result
+	}
 
-    return {
-        currentLang,
-        languages,
-        defaultLang,
-        profile,
-        sections,
-        t
-    }
+	// 4. Подготовленные реактивные данные
+	const profile = computed(() => processDynamic(cvData?.profile || {}))
+	const sections = computed(() => processDynamic(cvData?.sections || []))
+
+	// 5. Единый список навигации для Spine / Nav
+	const navigation = computed(() => {
+		const items = []
+		if (profile.value && profile.value.id) {
+			items.push({
+				id: profile.value.id,
+				label: profile.value.label || 'Profile',
+				isProfile: true
+			})
+		}
+		if (Array.isArray(sections.value)) {
+			sections.value.forEach(section => {
+				items.push({
+					id: section.id,
+					label: section.label || section.id,
+					isProfile: false
+				})
+			})
+		}
+		return items
+	})
+
+	// 6. Активная секция
+	const activeSectionId = ref(profile.value?.id || 'profile')
+
+	const activeSection = computed(() => {
+		if (activeSectionId.value === profile.value?.id) {
+			return {
+				...profile.value,
+				isProfile: true
+			}
+		}
+		const found = sections.value.find(s => s.id === activeSectionId.value)
+		return found ? { ...found, isProfile: false } : null
+	})
+
+	return {
+		theme,
+		currentLang,
+		languages,
+		defaultLang,
+		profile,
+		sections,
+		navigation,
+		activeSectionId,
+		activeSection,
+		t
+	}
 }

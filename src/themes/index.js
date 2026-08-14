@@ -11,17 +11,20 @@ for (const path in modules) {
 
 export const defaultThemeId = 'dossier'
 
-export async function getTheme(themeId) {
+export async function loadTheme(themeId) {
     const targetId = themeId && themes[themeId] ? themeId : defaultThemeId
     const theme = themes[targetId]
 
     if (!theme) {
-        throw new Error(`Theme "${targetId}" not found`)
+        console.warn(`Theme "${targetId}" not found, falling back to "${defaultThemeId}"`)
+        const fallback = themes[defaultThemeId]
+        if (fallback?.loadStyles) await fallback.loadStyles()
+        return fallback
     }
 
     if (theme.loadStyles) {
         await theme.loadStyles()
     }
 
-    return theme.component
+    return theme
 }

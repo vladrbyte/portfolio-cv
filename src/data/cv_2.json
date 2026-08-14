@@ -8,32 +8,41 @@
     "defaultLang": "de"
   },
   "profile": {
-    "fullname": "Vladyslav Loktev",
-    "headline": {
-      "de": "Lebenslauf",
-      "en": "Curriculum Vitae"
+    "id": "profile",
+    "label": {
+      "de": "Über mich",
+      "en": "Profile"
     },
-    "address": "Giselastr. 1, 90441 Nürnberg",
-    "birthDate": "03.07.1987",
-    "birthPlace": "Dnipro/Ukraine",
-    "nationality": "Deutsch",
-    "contacts": [
-      {
-        "type": "phone",
-        "label": "01575 5437565",
-        "href": "tel:+49015755437565"
-      },
-      {
-        "type": "email",
-        "label": "vladyslavloktev@gmail.com",
-        "href": "mailto:vladyslavloktev@gmail.com"
-      },
-      {
-        "type": "github",
-        "label": "vladrbyte",
-        "href": "https://github.com/vladrbyte"
+    "info": {
+      "fullname": "Vladyslav Loktev",
+      "address": "Giselastr. 1, 90441 Nürnberg",
+      "birthDate": "03.07.1987",
+      "birthPlace": "Dnipro/Ukraine",
+      "nationality": "Deutsch",
+      "contacts": [
+        {
+          "type": "phone",
+          "label": "+491575 5437565",
+          "href": "tel:+4915755437565"
+        },
+        {
+          "type": "email",
+          "label": "vladyslavloktev@gmail.com",
+          "href": "mailto:vladyslavloktev@gmail.com"
+        },
+        {
+          "type": "github",
+          "label": "vladrbyte",
+          "href": "https://github.com/vladrbyte"
+        }
+      ]
+    },
+    "tools": {
+      "headline": {
+        "de": "Lebenslauf",
+        "en": "Curriculum Vitae"
       }
-    ]
+    }
   },
   "sections": [
     {
