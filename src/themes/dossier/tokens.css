@@ -1,22 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700;800&display=swap');
+
 :root {
-    --dossier-bg: #f9f8f6;
-    --dossier-card-bg: #ffffff;
-    --dossier-text: #2c2c2e;
-    --dossier-heading: #111113;
-    --dossier-accent: #6366f1;
-    --dossier-border: #e2e8f0;
-    --dossier-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    --dossier-radius: 16px;
+  /* Dossier Light (Manilla Folder / Technical Paper) */
+  --dossier-desk-bg: #dcd4c2;
+  --dossier-folder-bg: #ece5d6;
+  --dossier-paper-bg: #faf7ef;
+  --dossier-card-bg: #f3eedf;
+  --dossier-subtle-bg: #eae3d0;
+  
+  --dossier-ink: #161513;
+  --dossier-ink-secondary: #4a453d;
+  --dossier-ink-muted: #857d72;
+  
+  --dossier-border-strong: #1e1d1a;
+  --dossier-border-medium: #8c8273;
+  --dossier-border-subtle: #cec4b2;
+  
+  --dossier-accent: #c43820;
+  --dossier-accent-light: #fbeee8;
+  --dossier-accent-ink: #ffffff;
+  
+  --dossier-tab-inactive-bg: #ddd5c0;
+  --dossier-tab-inactive-text: #343029;
+  --dossier-tab-hover-bg: #d0c7b0;
+  
+  --dossier-shadow-folder: 0 16px 36px rgba(45, 38, 25, 0.16), 0 2px 8px rgba(0, 0, 0, 0.05);
+  --dossier-shadow-card: 0 2px 6px rgba(35, 30, 20, 0.06);
+  
+  --dossier-font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --dossier-font-mono: 'JetBrains Mono', 'Courier Prime', monospace;
+  --dossier-radius-folder: 18px;
+  --dossier-radius-tab: 12px;
+  --dossier-radius-card: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --dossier-bg: #0f1117;
-        --dossier-card-bg: #1a1d24;
-        --dossier-text: #9ca3af;
-        --dossier-heading: #f3f4f6;
-        --dossier-accent: #818cf8;
-        --dossier-border: #2d3748;
-        --dossier-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    }
+  :root {
+    /* Dossier Classified Dark (Obsidian / Field Report) */
+    --dossier-desk-bg: #0c0d10;
+    --dossier-folder-bg: #14171d;
+    --dossier-paper-bg: #1b1f27;
+    --dossier-card-bg: #222732;
+    --dossier-subtle-bg: #2a303d;
+    
+    --dossier-ink: #f2f4f8;
+    --dossier-ink-secondary: #adb6c4;
+    --dossier-ink-muted: #6e798c;
+    
+    --dossier-border-strong: #434c5b;
+    --dossier-border-medium: #343c4a;
+    --dossier-border-subtle: #262c37;
+    
+    --dossier-accent: #e2492f;
+    --dossier-accent-light: #3d1c16;
+    --dossier-accent-ink: #ffffff;
+    
+    --dossier-tab-inactive-bg: #171a22;
+    --dossier-tab-inactive-text: #c2cad6;
+    --dossier-tab-hover-bg: #222631;
+    
+    --dossier-shadow-folder: 0 20px 50px rgba(0, 0, 0, 0.6);
+    --dossier-shadow-card: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
 }

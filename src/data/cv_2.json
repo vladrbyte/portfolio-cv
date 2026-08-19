@@ -9,52 +9,89 @@
   },
   "profile": {
     "id": "profile",
+    "fullname": "Vladyslav Loktev",
     "label": {
       "de": "Über mich",
       "en": "Profile"
     },
-    "info": {
-      "fullname": "Vladyslav Loktev",
-      "address": "Giselastr. 1, 90441 Nürnberg",
-      "birthDate": "03.07.1987",
-      "birthPlace": "Dnipro/Ukraine",
-      "nationality": "Deutsch",
-      "contacts": [
-        {
-          "type": "phone",
-          "label": "+491575 5437565",
-          "href": "tel:+4915755437565"
+    "info": [
+      {
+        "key": "address",
+        "label": {
+          "de": "Wohnort / Adresse",
+          "en": "Location / Address"
         },
-        {
-          "type": "email",
-          "label": "vladyslavloktev@gmail.com",
-          "href": "mailto:vladyslavloktev@gmail.com"
+        "value": "Giselastr. 1, 90441 Nürnberg"
+      },
+      {
+        "key": "birthDate",
+        "label": {
+          "de": "Geburtsdatum",
+          "en": "Date of Birth"
         },
-        {
-          "type": "github",
-          "label": "vladrbyte",
-          "href": "https://github.com/vladrbyte"
+        "value": "03.07.1987"
+      },
+      {
+        "key": "birthPlace",
+        "label": {
+          "de": "Geburtsort",
+          "en": "Place of Birth"
+        },
+        "value": "Dnipro/Ukraine"
+      },
+      {
+        "key": "nationality",
+        "label": {
+          "de": "Staatsangehörigkeit",
+          "en": "Nationality"
+        },
+        "value": {
+          "de": "Deutsch",
+          "en": "German"
         }
-      ]
-    },
+      }
+    ],
+    "contacts": [
+      {
+        "type": "phone",
+        "emoji": "📞",
+        "label": "+49 1575 5437565",
+        "href": "tel:+4915755437565"
+      },
+      {
+        "type": "email",
+        "emoji": "✉️",
+        "label": "vladyslavloktev@gmail.com",
+        "href": "mailto:vladyslavloktev@gmail.com"
+      },
+      {
+        "type": "github",
+        "emoji": "🐙",
+        "label": "github.com/vladrbyte",
+        "href": "https://github.com/vladrbyte"
+      }
+    ],
     "tools": {
       "headline": {
-        "de": "Lebenslauf",
-        "en": "Curriculum Vitae"
+        "de": "Lebenslauf // Software- & App-Entwickler",
+        "en": "Curriculum Vitae // Software & App Developer"
       }
     }
   },
   "sections": [
     {
       "id": "career_core",
-      "label": "IT",
+      "label": {
+        "de": "IT-Erfahrung",
+        "en": "IT Experience"
+      },
       "items": [
         {
           "id": "vjik_dev",
-          "title": "vjik.dev",
+          "title": "vjik dev",
           "subtitle": {
-            "de": "App-Entwicklung",
-            "en": "App Development"
+            "de": "App- & Webentwicklung",
+            "en": "App & Web Development"
           },
           "period": {
             "de": "01.2025 - jetzt",
@@ -73,13 +110,17 @@
               "Development of Pictl Android app (OCR photo-to-calendar) using Kotlin and ML Kit",
               "Building web dashboards and tools with Vue.js and React"
             ]
-          }
+          },
+          "stack": [
+            "Kotlin, JetPack Compose, Python",
+            "Vue.js, React, Node.js, Gradio"
+          ]
         },
         {
           "id": "tani_gmbh",
           "title": "Tani GmbH",
           "subtitle": {
-            "de": "Fullstack Entwicklung",
+            "de": "Fullstack-Entwicklung",
             "en": "Fullstack Development"
           },
           "period": "04.2022 - 12.2024",
@@ -87,16 +128,17 @@
             "de": "Entwicklung und Wartung von Webanwendungen und Schnittstellen.",
             "en": "Development and maintenance of web applications and interfaces."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": [],
+          "stack": [
+            "Vanille Javascript, PHP, Websockets, C ",
+            "jQuery, mustache.js, HTML5, CSS3"
+          ]
         },
         {
           "id": "krola_consulting",
           "title": "Krola Consulting GmbH",
           "subtitle": {
-            "de": "Frontend Entwicklung",
+            "de": "Frontend-Entwicklung",
             "en": "Frontend Development"
           },
           "period": "06.2021 - 04.2022",
@@ -104,33 +146,34 @@
             "de": "Umsetzung von Benutzeroberflächen und Frontend-Komponenten.",
             "en": "Implementation of user interfaces and frontend components."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": [],
+          "stack": [
+            "Vanille Javascript, PHP, Typescript ",
+            "jQuery, Angular, HTML5, CSS3"
+          ]
         },
         {
           "id": "dfk_nuernberg",
           "title": "DFK Nürnberg",
           "subtitle": {
-            "de": "IT-Abteilung - intern",
-            "en": "IT Department - internal"
+            "de": "IT-Abteilung (Intern)",
+            "en": "IT Department (Internal)"
           },
           "period": "03.2021 - 06.2021",
           "description": {
             "de": "Interne IT-Betreuung und Systemunterstützung.",
             "en": "Internal IT support and system maintenance."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": [],
+          "stack": [
+            "Office 365, Sharepoint, Windows Server, Active Directory"
+          ]
         },
         {
           "id": "la_drucksofa",
           "title": "LA Drucksofa",
           "subtitle": {
-            "de": "Fullstack Entwicklung",
+            "de": "Fullstack-Entwicklung",
             "en": "Fullstack Development"
           },
           "period": "01.2021 - 03.2021",
@@ -138,27 +181,29 @@
             "de": "Webentwicklung und Betreuung von Druck- und E-Commerce-Systemen.",
             "en": "Web development and maintenance of print and e-commerce systems."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": [],
+          "stack": [
+            "Vanille Javascript, PHP",
+            "jQuery, WordPress, HTML5, CSS3"
+          ]
         },
         {
           "id": "kleinoeder_dev",
           "title": "Kleinoeder-Development",
           "subtitle": {
             "de": "Praktikum als Web- und App-Entwickler",
-            "en": "Internship as Web and App Developer"
+            "en": "Internship as Web & App Developer"
           },
           "period": "02.2019 - 12.2019",
           "description": {
-            "de": "Praktikum während der Ausbildungszeit mit Fokus auf Web- und App-Projekte.",
-            "en": "Internship during the training period focused on web and app projects."
+            "de": "Praktikum während der Ausbildung mit Fokus auf Web- und App-Projekte.",
+            "en": "Internship during vocational training focused on web and app projects."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": [],
+          "stack": [
+            "Vanille Javascript, PHP, Typescript ",
+            "jQuery, Angular, Ionic, Quasar, HTML5, CSS3"
+          ]
         }
       ]
     },
@@ -173,18 +218,15 @@
           "id": "novasoft",
           "title": "Novasoft",
           "subtitle": {
-            "de": "SEO – Marketing Abteilung",
-            "en": "SEO – Marketing Department"
+            "de": "SEO & Online-Marketing",
+            "en": "SEO & Online Marketing"
           },
           "period": "05.2017 - 10.2017",
           "description": {
             "de": "Suchmaschinenoptimierung und Marketing-Aktivitäten.",
             "en": "Search engine optimization and marketing activities."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "autojack",
@@ -196,12 +238,9 @@
           "period": "09.2014 - 02.2016",
           "description": {
             "de": "Kundenberatung und Vertrieb im Fahrzeugbereich.",
-            "en": "Customer consulting and sales in the automotive field."
+            "en": "Customer consulting and sales in the automotive sector."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "self_employed",
@@ -218,138 +257,111 @@
             "de": "Freiberufliche Tätigkeiten in den Bereichen Beratung und Kundenbetreuung.",
             "en": "Freelance activities in consulting and customer support."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         }
       ]
     },
     {
       "id": "education",
       "label": {
-        "de": "Akademische Laufbahn",
-        "en": "Academic Career"
+        "de": "Akademische Laufbahn & Ausbildung",
+        "en": "Academic Career & Education"
       },
       "items": [
         {
           "id": "iu_akademie",
           "title": "IU Akademie",
-          "subtitle": {
-            "de": "AI Engineering and Voice Assistant",
-            "en": "AI Engineering and Voice Assistant"
-          },
+          "subtitle": "AI Engineering & Voice Assistant",
           "period": "22.12.2025 - 19.06.2026",
           "description": {
             "de": "Weiterbildung im Bereich KI-Engineering und Sprachassistenten.",
             "en": "Further education in AI Engineering and Voice Assistants."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "lutz_grub",
           "title": "Lutz & Grub AG Nürnberg",
           "subtitle": {
             "de": "Fachinformatiker Anwendungsentwicklung",
-            "en": "IT Specialist for Software Development"
+            "en": "IT Specialist for Application Development (IHK)"
           },
           "period": "11.2017 - 12.2020",
           "description": {
             "de": "Duale Ausbildung mit IHK-Abschluss.",
-            "en": "Vocational training with IHK degree."
+            "en": "Dual vocational training with IHK certificate."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "uni_erlangen",
           "title": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
           "subtitle": {
-            "de": "Rechtswissenschaft, Geschichte",
-            "en": "Law, History"
+            "de": "Rechtswissenschaft & Geschichte",
+            "en": "Law & History"
           },
           "period": "10.2010 - 02.2012",
           "description": {
             "de": "Universitätsstudium.",
             "en": "University studies."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "abendgymnasium",
           "title": "Abendgymnasium Nürnberg",
           "subtitle": {
-            "de": "Abitur",
-            "en": "Abitur (High School Diploma)"
+            "de": "Allgemeine Hochschulreife (Abitur)",
+            "en": "General Higher Education Entrance Qualification (Abitur)"
           },
           "period": "09.2007 - 06.2010",
           "description": {
             "de": "Erwerb der allgemeinen Hochschulreife.",
-            "en": "General Higher Education Entrance Qualification."
+            "en": "Acquisition of general university entrance qualification."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "boeckler_realschule",
-          "title": "Hans-Böckler Realschule",
+          "title": "Hans-Böckler-Realschule",
           "subtitle": {
             "de": "Mittlere Reife",
-            "en": "Intermediate School Certificate"
+            "en": "Intermediate School Certificate (Mittlere Reife)"
           },
           "period": "09.2006 - 06.2007",
           "description": {
             "de": "Realschulabschluss.",
             "en": "Secondary school certificate."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "helene_lange_gymnasium",
           "title": "Helene-Lange-Gymnasium",
           "subtitle": {
             "de": "Gymnasiale Ausbildung",
-            "en": "High School Education"
+            "en": "Secondary School Education"
           },
           "period": "09.2003 - 07.2006",
           "description": {
             "de": "Schulausbildung.",
-            "en": "School education."
+            "en": "Secondary school education."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "school_dnipro",
           "title": "Secondary School No. 144, Dnipro",
           "subtitle": {
             "de": "Schulausbildung",
-            "en": "School Education"
+            "en": "Primary & Secondary School"
           },
           "period": "09.1994 - 06.2003",
           "description": {
-            "de": "Grund- und Sekundarschulausbildung in Ukraine.",
+            "de": "Grund- und Sekundarschulausbildung in der Ukraine.",
             "en": "Primary and secondary education in Ukraine."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         }
       ]
     },
@@ -363,21 +375,18 @@
         {
           "id": "skill_ai",
           "title": {
-            "de": "KI Systeme",
+            "de": "KI-Systeme",
             "en": "AI Systems"
           },
           "subtitle": {
-            "de": "IT-Fähigkeit",
-            "en": "IT Capability"
+            "de": "Spezialisierung",
+            "en": "Specialization"
           },
           "description": {
             "de": "Erfahrung mit AI Engineering, Prompting und Voice Assistant Integration.",
             "en": "Experience with AI Engineering, Prompting and Voice Assistant Integration."
           },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "bullets": []
         },
         {
           "id": "skill_scripting",
@@ -386,14 +395,8 @@
             "de": "Sprachen & Laufzeiten",
             "en": "Languages & Runtimes"
           },
-          "description": {
-            "de": "JavaScript, TypeScript, Python, Kotlin, PHP, C, Dart",
-            "en": "JavaScript, TypeScript, Python, Kotlin, PHP, C, Dart"
-          },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "description": "JavaScript, TypeScript, Python, Kotlin, PHP, C, Dart",
+          "bullets": []
         },
         {
           "id": "skill_frameworks",
@@ -402,14 +405,8 @@
             "de": "Frontend & Mobile",
             "en": "Frontend & Mobile"
           },
-          "description": {
-            "de": "Vue.js, React, Next.js, Jetpack Compose, Node.js, Angular, Flutter, Gradio, Redux",
-            "en": "Vue.js, React, Next.js, Jetpack Compose, Node.js, Angular, Flutter, Gradio, Redux"
-          },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "description": "Vue.js, React, Next.js, Jetpack Compose, Node.js, Angular, Flutter, Gradio, Redux",
+          "bullets": []
         },
         {
           "id": "skill_styles",
@@ -418,14 +415,8 @@
             "de": "Layout & Styling",
             "en": "Layout & Styling"
           },
-          "description": {
-            "de": "HTML5, CSS3, SCSS, Bootstrap, Quasar, Ionic, XML",
-            "en": "HTML5, CSS3, SCSS, Bootstrap, Quasar, Ionic, XML"
-          },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "description": "HTML5, CSS3, SCSS, Bootstrap, Quasar, Ionic, XML",
+          "bullets": []
         },
         {
           "id": "skill_databases",
@@ -434,14 +425,8 @@
             "de": "Datenhaltung",
             "en": "Data Storage"
           },
-          "description": {
-            "de": "SQL, MySQL, MongoDB",
-            "en": "SQL, MySQL, MongoDB"
-          },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "description": "SQL, MySQL, MongoDB",
+          "bullets": []
         }
       ]
     },
@@ -462,14 +447,8 @@
             "de": "Freizeit",
             "en": "Leisure"
           },
-          "description": {
-            "de": "Pub-Quiz, Magic: The Gathering (MTG), Dungeons & Dragons (D&D)",
-            "en": "Pub Quiz, Magic: The Gathering (MTG), Dungeons & Dragons (D&D)"
-          },
-          "bullets": {
-            "de": [],
-            "en": []
-          }
+          "description": "Pub-Quiz, Magic: The Gathering (MTG), Dungeons & Dragons (D&D)",
+          "bullets": []
         },
         {
           "id": "leisure_community",
@@ -493,8 +472,8 @@
             ],
             "en": [
               "Organization team for Ostanders Festival",
-              "Moderation of Russian Poetry Slam",
-              "Teaching at Chabad Nuremberg for seniors and youth"
+              "Host / Moderation of Russian Poetry Slam",
+              "Teaching seniors and youth at Chabad Nuremberg"
             ]
           }
         }

@@ -1,7 +1,8 @@
 <script setup>
-import { watchEffect } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { useCv } from '../composables/useCv'
-import { loadTheme } from '../themes'
+import { loadTheme, getThemeStrings } from '../themes'
+import { decor } from '../composables/constants'
 import cvData from '../data/cv_2.json'
 
 import Header from './Header.vue'
@@ -18,11 +19,21 @@ const {
   activeSection
 } = useCv(cvData)
 
+const themeStrings = computed(() => {
+  return getThemeStrings(theme.value, currentLang.value)
+})
+
 watchEffect(async () => {
   if (theme.value) {
     await loadTheme(theme.value)
   }
 })
+
+watchEffect(() => {
+  document.title = `${theme.value} ${decor.doubleSectionDivider} ${profile.value?.fullname || ''}`
+  document.documentElement.lang = currentLang.value
+})
+
 </script>
 
 <template>
@@ -30,7 +41,9 @@ watchEffect(async () => {
     <div class="cv-container">
       <Header
         :profile="profile"
+        :activeSection="activeSection"
         :languages="languages"
+        :themeStrings="themeStrings"
         v-model:currentLang="currentLang"
         @selectProfile="activeSectionId = profile?.id || 'profile'"
       />
@@ -44,6 +57,8 @@ watchEffect(async () => {
 
         <Main
           :activeSection="activeSection"
+          :profile="profile"
+          :themeStrings="themeStrings"
         />
       </div>
     </div>

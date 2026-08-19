@@ -1,23 +1,23 @@
 import { ref, computed } from 'vue'
 
 export function useCv(cvData) {
-	// 1. Конфигурация языков из config
+	// 1. Языки из конфигурации
 	const languages = computed(() => {
 		const configLangs = cvData?.config?.languages
 		return Array.isArray(configLangs) && configLangs.length > 0 ? configLangs : []
 	})
 
 	const defaultLang = computed(() => {
-		return cvData?.config?.defaultLang || languages.value[0] || ''
+		return cvData?.config?.defaultLang || languages.value[0] || 'de'
 	})
 
 	const currentLang = ref(defaultLang.value)
 	const theme = computed(() => cvData?.config?.theme || 'dossier')
 
-	// 2. Универсальная функция перевода / фолбэка
+	// 2. Универсальная функция перевода с фолбэками
 	const t = (field) => {
 		if (field === null || field === undefined) return ''
-		if (typeof field === 'string' || typeof field === 'number') return field
+		if (typeof field === 'string' || typeof field === 'number') return String(field)
 
 		if (typeof field === 'object' && !Array.isArray(field)) {
 			if (currentLang.value && field[currentLang.value] !== undefined) {
@@ -34,7 +34,7 @@ export function useCv(cvData) {
 		return ''
 	}
 
-	// 3. Рекурсивная динамическая обработка структур данных
+	// 3. Рекурсивный парсер мультиязычных объектов
 	const processDynamic = (data) => {
 		if (!data) return data
 		if (typeof data !== 'object') return data
@@ -44,7 +44,6 @@ export function useCv(cvData) {
 		}
 
 		const keys = Object.keys(data)
-		// Проверяем, является ли объект словарем переводов (все ключи есть в languages)
 		const isTranslationObj = languages.value.length > 0 &&
 			keys.length > 0 &&
 			keys.every(k => languages.value.includes(k))
@@ -67,29 +66,35 @@ export function useCv(cvData) {
 		return result
 	}
 
-	// 4. Подготовленные реактивные данные
+	// 4. Реактивные обработанные данные
 	const profile = computed(() => processDynamic(cvData?.profile || {}))
 	const sections = computed(() => processDynamic(cvData?.sections || []))
 
-	// 5. Единый список навигации для Spine / Nav
+	// 5. Единый список навигации с индексацией (01, 02, 03...)
 	const navigation = computed(() => {
 		const items = []
+		let counter = 1
+
 		if (profile.value && profile.value.id) {
 			items.push({
 				id: profile.value.id,
+				index: String(counter++).padStart(2, '0'),
 				label: profile.value.label || 'Profile',
 				isProfile: true
 			})
 		}
+
 		if (Array.isArray(sections.value)) {
 			sections.value.forEach(section => {
 				items.push({
 					id: section.id,
+					index: String(counter++).padStart(2, '0'),
 					label: section.label || section.id,
 					isProfile: false
 				})
 			})
 		}
+
 		return items
 	})
 
@@ -97,14 +102,19 @@ export function useCv(cvData) {
 	const activeSectionId = ref(profile.value?.id || 'profile')
 
 	const activeSection = computed(() => {
+		const navItem = navigation.value.find(item => item.id === activeSectionId.value)
+		const index = navItem ? navItem.index : '01'
+
 		if (activeSectionId.value === profile.value?.id) {
 			return {
 				...profile.value,
+				index,
 				isProfile: true
 			}
 		}
+
 		const found = sections.value.find(s => s.id === activeSectionId.value)
-		return found ? { ...found, isProfile: false } : null
+		return found ? { ...found, index, isProfile: false } : null
 	})
 
 	return {

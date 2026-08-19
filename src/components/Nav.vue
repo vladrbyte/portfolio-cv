@@ -22,7 +22,10 @@ const emit = defineEmits(['select'])
           :class="{ active: activeId === item.id }"
           @click="emit('select', item.id)"
         >
-          {{ item.label }}
+          <span class="cv-tab-text">
+            <span class="cv-tab-index">{{ item.index }}.</span>
+            <span class="cv-tab-label">{{ item.label }}</span>
+          </span>
         </button>
       </li>
     </ul>

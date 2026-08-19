@@ -28,3 +28,19 @@ export async function loadTheme(themeId) {
 
     return theme
 }
+
+export function getThemeStrings(themeId, lang = 'de') {
+    const targetId = themeId && themes[themeId] ? themeId : defaultThemeId
+    const theme = themes[targetId]
+    if (!theme?.strings) return {}
+
+    const result = {}
+    for (const [key, val] of Object.entries(theme.strings)) {
+        if (typeof val === 'object' && val !== null) {
+            result[key] = val[lang] || Object.values(val)[0] || ''
+        } else {
+            result[key] = val
+        }
+    }
+    return result
+}

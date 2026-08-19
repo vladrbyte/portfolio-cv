@@ -1,239 +1,879 @@
-/* Dossier Theme Styles */
+/* ==========================================================================
+   DOSSIER THEME STYLES
+   Inspired by tactile index folders, classified personnel files & technical blueprints
+   ========================================================================== */
 
 .theme-dossier {
-    min-height: 100vh;
-    background-color: var(--dossier-bg);
-    color: var(--dossier-text);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.5;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--dossier-desk-bg);
+  color: var(--dossier-ink);
+  font-family: var(--dossier-font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
+/* ==========================================================================
+   1. MAIN FOLDER CONTAINER (Тетрадка / Папка)
+   ========================================================================== */
 .theme-dossier .cv-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 24px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 980px;
+  background-color: var(--dossier-folder-bg);
+  border: 2px solid var(--dossier-border-strong);
+  border-radius: var(--dossier-radius-folder);
+  box-shadow: var(--dossier-shadow-folder);
+  padding: 24px 28px 32px;
+  box-sizing: border-box;
+  position: relative;
 }
 
-/* Header */
+/* ==========================================================================
+   2. DOSSIER HEADER
+   ========================================================================== */
 .theme-dossier .cv-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 32px;
-    border-bottom: 1px solid var(--dossier-border);
-    padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--dossier-border-strong);
+  padding-bottom: 20px;
 }
 
-.theme-dossier .cv-profile-summary.clickable {
-    cursor: pointer;
-    user-select: none;
+.theme-dossier .cv-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--dossier-border-medium);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  gap: 12px;
 }
 
-.theme-dossier .cv-profile-summary h1 {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--dossier-heading);
+.theme-dossier .cv-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+
+.theme-dossier .cv-reg-mark {
+  font-family: var(--dossier-font-mono);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--dossier-ink-muted);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.theme-dossier .cv-doc-code {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dossier-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.theme-dossier .cv-badge-tag {
+  font-family: var(--dossier-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 2px 8px;
+  border: 1.5px solid var(--dossier-border-strong);
+  border-radius: 4px;
+  background-color: var(--dossier-subtle-bg);
+  color: var(--dossier-ink);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.theme-dossier .cv-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.theme-dossier .cv-lang-switch {
+  display: flex;
+  border: 1.5px solid var(--dossier-border-strong);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--dossier-card-bg);
+}
+
+.theme-dossier .cv-lang-btn {
+  border: none;
+  background: transparent;
+  padding: 4px 10px;
+  font-family: var(--dossier-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dossier-ink-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.theme-dossier .cv-lang-btn:not(:last-child) {
+  border-right: 1px solid var(--dossier-border-medium);
+}
+
+.theme-dossier .cv-lang-btn.active {
+  background-color: var(--dossier-border-strong);
+  color: var(--dossier-folder-bg);
+}
+
+.theme-dossier .cv-lang-btn:hover:not(.active) {
+  background-color: var(--dossier-subtle-bg);
+  color: var(--dossier-ink);
+}
+
+/* Header Name & Title */
+.theme-dossier .cv-profile-summary {
+  display: inline-block;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.theme-dossier .cv-name {
+  margin: 0;
+  font-family: var(--dossier-font-heading);
+  font-size: clamp(24px, 4.5vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: var(--dossier-ink);
+  line-height: 1.15;
+  transition: color 0.15s ease;
+  word-break: break-word;
+}
+
+.theme-dossier .cv-profile-summary:hover .cv-name {
+  color: var(--dossier-accent);
 }
 
 .theme-dossier .cv-headline {
-    margin: 4px 0 0;
-    font-size: 14px;
-    opacity: 0.8;
+  margin: 6px 0 0;
+  font-size: clamp(12px, 2vw, 14px);
+  color: var(--dossier-ink-secondary);
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
-.theme-dossier .cv-lang-select {
-    padding: 6px 12px;
-    border-radius: 8px;
-    border: 1px solid var(--dossier-border);
-    background: var(--dossier-card-bg);
-    color: var(--dossier-text);
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-/* Layout: Spine + Main */
+/* ==========================================================================
+   3. DOSSIER LAYOUT
+   ========================================================================== */
 .theme-dossier .cv-layout {
-    display: grid;
-    grid-template-columns: 240px minmax(0, 1fr);
-    gap: 24px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 0;
+  align-items: start;
+  position: relative;
 }
 
-@media (max-width: 768px) {
-    .theme-dossier .cv-layout {
-        grid-template-columns: 1fr;
-    }
+/* ==========================================================================
+   4. SPINE / PHYSICAL INDEX TABS (Desktop)
+   ========================================================================== */
+.theme-dossier .cv-nav {
+  position: sticky;
+  top: 24px;
+  height: calc(100dvh - 180px);
+  min-height: 420px;
+  max-height: calc(100dvh - 48px);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  margin-right: -2px; /* Входит под левый бордер тетрадки */
+  box-sizing: border-box;
 }
 
-/* Navigation (Spine) */
 .theme-dossier .cv-nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.theme-dossier .cv-nav-item {
+  flex: 1 1 0px;
+  display: flex;
+  min-height: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .theme-dossier .cv-nav-tab {
-    width: 100%;
-    text-align: left;
-    padding: 12px 16px;
-    border-radius: var(--dossier-radius);
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--dossier-text);
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    box-sizing: border-box;
-    word-break: break-word;
+  width: 100%;
+  height: 100%;
+  flex: 1 1 0px;
+  min-height: 0;
+  text-align: left;
+  padding: 6px 14px;
+  /* Закругление и контур слева, справа контакт с тетрадкой без бордера */
+  border-radius: var(--dossier-radius-tab) 0 0 var(--dossier-radius-tab);
+  border-top: 2px solid var(--dossier-border-strong);
+  border-bottom: 2px solid var(--dossier-border-strong);
+  border-left: 3px solid var(--dossier-border-strong); /* Выделенный контур к левому краю */
+  border-right: none;
+  background-color: var(--dossier-tab-inactive-bg);
+  color: var(--dossier-tab-inactive-text);
+  font-family: var(--dossier-font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
-.theme-dossier .cv-nav-tab:hover {
-    background: var(--dossier-border);
+.theme-dossier .cv-tab-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
+.theme-dossier .cv-tab-index {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.theme-dossier .cv-tab-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.theme-dossier .cv-nav-tab:hover:not(.active) {
+  background-color: var(--dossier-tab-hover-bg);
+}
+
+/* Активный корешок: БЕЗ отступа влево, четкое выделение цветом */
 .theme-dossier .cv-nav-tab.active {
-    background: var(--dossier-card-bg);
-    color: var(--dossier-heading);
-    border-color: var(--dossier-border);
-    box-shadow: var(--dossier-shadow);
-    font-weight: 600;
+  background-color: var(--dossier-accent);
+  color: var(--dossier-accent-ink);
+  border-top-color: var(--dossier-border-strong);
+  border-bottom-color: var(--dossier-border-strong);
+  border-left-color: var(--dossier-border-strong);
+  border-right: none;
+  transform: none; /* Убран отступ влево */
+  width: 100%;
+  font-weight: 700;
+  z-index: 3;
 }
 
-/* Main Content Area */
+.theme-dossier .cv-nav-tab.active .cv-tab-index {
+  opacity: 0.95;
+}
+
+/* ==========================================================================
+   5. MAIN CONTENT / PAPER SHEET (Лист тетрадки)
+   ========================================================================== */
 .theme-dossier .cv-main {
-    background: var(--dossier-card-bg);
-    border-radius: var(--dossier-radius);
-    padding: 24px;
-    border: 1px solid var(--dossier-border);
-    box-shadow: var(--dossier-shadow);
+  background-color: var(--dossier-paper-bg);
+  border: 2px solid var(--dossier-border-strong);
+  border-radius: 0 var(--dossier-radius-folder) var(--dossier-radius-folder) var(--dossier-radius-folder);
+  padding: 28px 28px 24px;
+  box-shadow: var(--dossier-shadow-card);
+  position: relative;
+  min-width: 0;
+  min-height: calc(100dvh - 180px);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.theme-dossier .cv-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--dossier-border-strong);
 }
 
 .theme-dossier .cv-section-heading {
-    margin-top: 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--dossier-heading);
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--dossier-border);
-    padding-bottom: 10px;
+  margin: 0;
+  font-family: var(--dossier-font-heading);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 700;
+  color: var(--dossier-ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.theme-dossier .cv-items-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.theme-dossier .cv-heading-index {
+  color: var(--dossier-accent);
 }
 
-/* Card Common */
-.theme-dossier .cv-card {
-    padding: 16px;
-    border-radius: 12px;
-    background: var(--dossier-bg);
-    border: 1px solid var(--dossier-border);
+.theme-dossier .cv-heading-divider {
+  color: var(--dossier-ink-muted);
 }
 
-/* Section Card */
-.theme-dossier .cv-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 8px;
+/* ==========================================================================
+   6. PROFILE PERSONNEL FILE CARD
+   ========================================================================== */
+.theme-dossier .cv-profile-card {
+  background-color: var(--dossier-card-bg);
+  border: 1.5px solid var(--dossier-border-strong);
+  border-radius: var(--dossier-radius-card);
+  padding: 24px;
+  position: relative;
 }
 
-.theme-dossier .cv-item-title {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--dossier-heading);
+.theme-dossier .cv-card-corner {
+  position: absolute;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--dossier-ink-muted);
+  user-select: none;
 }
 
-.theme-dossier .cv-item-subtitle {
-    margin: 2px 0 0;
-    font-size: 13px;
-    color: var(--dossier-text);
-    opacity: 0.85;
+.theme-dossier .cv-card-corner.top-left {
+  top: 8px;
+  left: 8px;
 }
 
-.theme-dossier .cv-item-period {
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 6px;
-    background: var(--dossier-border);
-    white-space: nowrap;
-    font-weight: 500;
+.theme-dossier .cv-card-corner.top-right {
+  top: 8px;
+  right: 8px;
 }
 
-.theme-dossier .cv-item-description {
-    margin: 8px 0 0;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.theme-dossier .cv-item-bullets {
-    margin: 10px 0 0;
-    padding-left: 20px;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.theme-dossier .cv-item-bullets li {
-    margin-bottom: 4px;
-}
-
-/* Profile Card */
 .theme-dossier .cv-profile-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .theme-dossier .cv-profile-row {
-    display: flex;
-    gap: 12px;
-    font-size: 14px;
-    align-items: center;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
 }
 
 .theme-dossier .cv-profile-label {
-    font-weight: 600;
-    color: var(--dossier-heading);
-    min-width: 150px;
+  font-weight: 700;
+  color: var(--dossier-ink);
+  white-space: nowrap;
+  min-width: 170px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.theme-dossier .cv-profile-dots {
+  flex: 1;
+  border-bottom: 1.5px dotted var(--dossier-border-medium);
+  min-width: 20px;
+  height: 1px;
+  align-self: center;
 }
 
 .theme-dossier .cv-profile-value {
-    color: var(--dossier-text);
+  color: var(--dossier-ink-secondary);
+  font-weight: 500;
+  text-align: right;
+  word-break: break-word;
 }
 
+/* Contacts as classified channels - Column layout */
 .theme-dossier .cv-profile-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--dossier-border-medium);
+}
+
+.theme-dossier .cv-contact-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--dossier-subtle-bg);
+  border: 1.5px solid var(--dossier-border-strong);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  min-width: 0;
+}
+
+.theme-dossier .cv-contact-chip:hover {
+  background-color: var(--dossier-paper-bg);
+  border-color: var(--dossier-accent);
+  transform: translateX(4px);
+}
+
+.theme-dossier .cv-chip-emoji {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.theme-dossier .cv-chip-type {
+  color: var(--dossier-accent);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.theme-dossier .cv-chip-link,
+.theme-dossier .cv-chip-text {
+  color: var(--dossier-ink);
+  text-decoration: none;
+  transition: color 0.15s ease;
+  margin-left: auto;
+  text-align: right;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.theme-dossier .cv-chip-link:hover {
+  color: var(--dossier-accent);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   7. TIMELINE & SECTION CARDS
+   ========================================================================== */
+.theme-dossier .cv-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.theme-dossier .cv-timeline-track {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 6px;
+  width: 2px;
+  background-color: var(--dossier-border-strong);
+}
+
+.theme-dossier .cv-timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.theme-dossier .cv-timeline-entry {
+  position: relative;
+}
+
+.theme-dossier .cv-timeline-node {
+  position: absolute;
+  left: -28px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-dossier .cv-node-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--dossier-paper-bg);
+  border: 2.5px solid var(--dossier-border-strong);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.theme-dossier .cv-timeline-entry:hover .cv-node-dot {
+  background-color: var(--dossier-accent);
+  border-color: var(--dossier-accent);
+  transform: scale(1.3);
+}
+
+/* Section Card */
+.theme-dossier .cv-section-card {
+  background-color: var(--dossier-card-bg);
+  border: 1.5px solid var(--dossier-border-strong);
+  border-radius: var(--dossier-radius-card);
+  padding: 18px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  word-break: break-word;
+}
+
+.theme-dossier .cv-section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.theme-dossier .cv-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.theme-dossier .cv-card-title-group {
+  min-width: 0;
+  flex: 1;
+}
+
+.theme-dossier .cv-item-title {
+  margin: 0;
+  font-family: var(--dossier-font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dossier-ink);
+  line-height: 1.25;
+}
+
+.theme-dossier .cv-item-subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--dossier-accent);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.theme-dossier .cv-item-period {
+  font-family: var(--dossier-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: var(--dossier-subtle-bg);
+  border: 1px solid var(--dossier-border-strong);
+  white-space: nowrap;
+  color: var(--dossier-ink);
+  flex-shrink: 0;
+}
+
+.theme-dossier .cv-item-description {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--dossier-ink-secondary);
+  line-height: 1.5;
+}
+
+.theme-dossier .cv-item-bullets {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--dossier-ink-secondary);
+}
+
+.theme-dossier .cv-item-bullets li {
+  margin-bottom: 6px;
+  position: relative;
+}
+
+/* ==========================================================================
+   8. FOOTER REGISTER MARKS
+   ========================================================================== */
+.theme-dossier .cv-main-footer {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--dossier-border-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--dossier-ink-muted);
+  letter-spacing: 1px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.theme-dossier .cv-footer-code {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE BREAKPOINTS (Mobile & Tablet)
+   ========================================================================== */
+
+/* Tablet (769px - 920px) */
+@media (max-width: 920px) and (min-width: 769px) {
+  .theme-dossier .cv-layout {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+
+  .theme-dossier .cv-nav {
+    height: calc(100dvh - 160px);
+  }
+
+  .theme-dossier .cv-nav-tab {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile & Small Screens (<= 768px): Корешки гарантированно внутри экрана */
+@media (max-width: 768px) {
+  .theme-dossier {
+    padding: 8px 4px;
+  }
+
+  .theme-dossier .cv-container {
+    padding: 10px 6px 12px;
+    border-radius: 12px;
+    border-width: 1.5px;
+  }
+
+  .theme-dossier .cv-header {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+
+  .theme-dossier .cv-header-top {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+
+  .theme-dossier .cv-doc-code {
+    font-size: 10px;
+    max-width: 160px;
+  }
+
+  .theme-dossier .cv-badge-tag {
+    display: none;
+  }
+
+  /* Сетка на мобилке */
+  .theme-dossier .cv-layout {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 0;
+    align-items: start;
+  }
+
+  /* Левый спайн: растянут точно на всю высоту экрана за вычетом шапки */
+  .theme-dossier .cv-nav {
+    position: sticky;
+    top: 8px;
+    height: calc(100dvh - 145px);
+    max-height: calc(100dvh - 140px);
+    min-height: 280px;
+    z-index: 1;
+    margin-right: -2px; /* Входит под лист тетрадки */
+    box-sizing: border-box;
+  }
+
+  .theme-dossier .cv-nav-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid var(--dossier-border);
-}
+    flex-direction: column;
+    gap: 2px;
+    height: 100%;
+    flex: 1;
+    box-sizing: border-box;
+  }
 
-.theme-dossier .cv-contact-chip a,
-.theme-dossier .cv-contact-chip span {
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 6px;
-    background: var(--dossier-border);
-    color: var(--dossier-heading);
-    text-decoration: none;
+  .theme-dossier .cv-nav-item {
+    flex: 1 1 0px;
+    display: flex;
+    min-height: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Вертикальный корешок с контуром слева и номером в один ряд */
+  .theme-dossier .cv-nav-tab {
+    width: 44px;
+    height: 100%;
+    flex: 1 1 0px;
+    min-height: 0;
+    padding: 2px 2px;
+    border-radius: 10px 0 0 10px;
+    border-top: 1.5px solid var(--dossier-border-strong);
+    border-bottom: 1.5px solid var(--dossier-border-strong);
+    border-left: 2.5px solid var(--dossier-border-strong); /* Четкий контур к левому краю */
+    border-right: none;
+    background-color: var(--dossier-tab-inactive-bg);
+    color: var(--dossier-tab-inactive-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    transition: background-color 0.15s ease, color 0.15s ease;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .theme-dossier .cv-tab-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    max-height: 100%;
+  }
+
+  .theme-dossier .cv-tab-index {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    opacity: 0.85;
+    flex-shrink: 0;
+  }
+
+  .theme-dossier .cv-tab-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .theme-dossier .cv-nav-tab:hover:not(.active) {
+    background-color: var(--dossier-tab-hover-bg);
+  }
+
+  /* Активный корешок на мобилке: БЕЗ отступа влево, только заливка и контур */
+  .theme-dossier .cv-nav-tab.active {
+    background-color: var(--dossier-accent);
+    color: var(--dossier-accent-ink);
+    border-top-color: var(--dossier-border-strong);
+    border-bottom-color: var(--dossier-border-strong);
+    border-left-color: var(--dossier-border-strong);
+    border-right: none;
+    transform: rotate(180deg); /* Убран отступ влево */
+    width: 44px;
+    box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+    z-index: 3;
+  }
+
+  /* Лист тетрадки справа (поверх корешков) */
+  .theme-dossier .cv-main {
+    padding: 14px 10px;
+    border-radius: 0 8px 8px 8px;
+    border-width: 1.5px;
+    min-height: calc(100dvh - 140px);
+    z-index: 2;
+    box-sizing: border-box;
+  }
+
+  .theme-dossier .cv-section-header {
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+  }
+
+  .theme-dossier .cv-section-heading {
+    font-size: 15px;
+  }
+
+  /* Профиль на мобилке */
+  .theme-dossier .cv-profile-card {
+    padding: 12px 10px;
+  }
+
+  .theme-dossier .cv-profile-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .theme-dossier .cv-profile-label {
+    min-width: unset;
+    font-size: 10px;
+    color: var(--dossier-ink-muted);
+  }
+
+  .theme-dossier .cv-profile-dots {
+    display: none;
+  }
+
+  .theme-dossier .cv-profile-value {
+    text-align: left;
     font-size: 13px;
-    font-weight: 500;
-    transition: opacity 0.2s ease;
-}
+    font-weight: 600;
+  }
 
-.theme-dossier .cv-contact-chip a:hover {
-    opacity: 0.8;
+  /* Контакты на мобилке */
+  .theme-dossier .cv-contact-chip {
+    padding: 8px 10px;
+    font-size: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .theme-dossier .cv-chip-link,
+  .theme-dossier .cv-chip-text {
+    font-size: 12px;
+  }
+
+  /* Таймлайн на мобилке */
+  .theme-dossier .cv-timeline {
+    padding-left: 18px;
+  }
+
+  .theme-dossier .cv-timeline-track {
+    left: 4px;
+  }
+
+  .theme-dossier .cv-timeline-node {
+    left: -18px;
+    top: 16px;
+  }
+
+  .theme-dossier .cv-node-dot {
+    width: 8px;
+    height: 8px;
+    border-width: 2px;
+  }
+
+  .theme-dossier .cv-section-card {
+    padding: 12px 10px;
+  }
+
+  .theme-dossier .cv-card-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .theme-dossier .cv-item-title {
+    font-size: 14px;
+  }
+
+  .theme-dossier .cv-item-period {
+    align-self: flex-start;
+    font-size: 10px;
+  }
+
+  .theme-dossier .cv-item-bullets {
+    padding-left: 14px;
+    font-size: 11px;
+  }
 }

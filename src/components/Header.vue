@@ -1,6 +1,16 @@
 <script setup>
+import { decor } from '../composables/constants'
+
 defineProps({
   profile: {
+    type: Object,
+    default: () => ({})
+  },
+  activeSection: {
+    type: Object,
+    default: () => ({})
+  },
+  themeStrings: {
     type: Object,
     default: () => ({})
   },
@@ -19,21 +29,42 @@ const emit = defineEmits(['update:currentLang', 'selectProfile'])
 
 <template>
   <header class="cv-header">
-    <div class="cv-profile-summary clickable" @click="emit('selectProfile')">
-      <h1 v-if="profile?.info?.fullname">{{ profile.info.fullname }}</h1>
-      <p v-if="profile?.tools?.headline" class="cv-headline">{{ profile.tools.headline }}</p>
+    <div class="cv-header-top">
+      <div class="cv-header-meta">
+        <span class="cv-reg-mark">{{ decor.regMark }}</span>
+        <span class="cv-doc-code">
+          {{ activeSection?.index || '01' }} — {{ activeSection?.label || profile?.tools?.headline }}
+        </span>
+        <span v-if="themeStrings?.badge" class="cv-badge-tag">
+          {{ themeStrings.badge }}
+        </span>
+      </div>
+
+      <div class="cv-header-controls">
+        <div v-if="languages.length" class="cv-lang-switch">
+          <button
+            v-for="lang in languages"
+            :key="lang"
+            class="cv-lang-btn"
+            :class="{ active: currentLang === lang }"
+            @click="emit('update:currentLang', lang)"
+          >
+            {{ lang.toUpperCase() }}
+          </button>
+        </div>
+        <span class="cv-reg-mark">{{ decor.regMark }}</span>
+      </div>
     </div>
 
-    <div v-if="languages.length" class="cv-controls">
-      <select 
-        :value="currentLang" 
-        @change="emit('update:currentLang', $event.target.value)" 
-        class="cv-lang-select"
-      >
-        <option v-for="lang in languages" :key="lang" :value="lang">
-          {{ lang.toUpperCase() }}
-        </option>
-      </select>
+    <div class="cv-header-main">
+      <div class="cv-profile-summary clickable" @click="emit('selectProfile')">
+        <h1 v-if="profile?.fullname" class="cv-name">
+          {{ profile.fullname }}
+        </h1>
+        <p v-if="profile?.tools?.headline" class="cv-headline">
+          {{ profile.tools.headline }}
+        </p>
+      </div>
     </div>
   </header>
 </template>
