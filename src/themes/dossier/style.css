@@ -1,8 +1,3 @@
-/* ==========================================================================
-   DOSSIER THEME STYLES
-   Inspired by tactile index folders, classified personnel files & technical blueprints
-   ========================================================================== */
-
 .theme-dossier {
   min-height: 100vh;
   min-height: 100dvh;
@@ -18,9 +13,6 @@
   align-items: flex-start;
 }
 
-/* ==========================================================================
-   1. MAIN FOLDER CONTAINER (Тетрадка / Папка)
-   ========================================================================== */
 .theme-dossier .cv-container {
   width: 100%;
   max-width: 980px;
@@ -33,9 +25,6 @@
   position: relative;
 }
 
-/* ==========================================================================
-   2. DOSSIER HEADER
-   ========================================================================== */
 .theme-dossier .cv-header {
   margin-bottom: 24px;
   border-bottom: 2px solid var(--dossier-border-strong);
@@ -136,7 +125,7 @@
   color: var(--dossier-ink);
 }
 
-/* Header Name & Title */
+
 .theme-dossier .cv-profile-summary {
   display: inline-block;
   cursor: pointer;
@@ -168,9 +157,6 @@
   letter-spacing: 0.2px;
 }
 
-/* ==========================================================================
-   3. DOSSIER LAYOUT
-   ========================================================================== */
 .theme-dossier .cv-layout {
   display: grid;
   grid-template-columns: 200px minmax(0, 1fr);
@@ -179,9 +165,7 @@
   position: relative;
 }
 
-/* ==========================================================================
-   4. SPINE / PHYSICAL INDEX TABS (Desktop)
-   ========================================================================== */
+
 .theme-dossier .cv-nav {
   position: sticky;
   top: 24px;
@@ -191,7 +175,7 @@
   display: flex;
   flex-direction: column;
   z-index: 2;
-  margin-right: -2px; /* Входит под левый бордер тетрадки */
+  margin-right: -2px;
   box-sizing: border-box;
 }
 
@@ -222,11 +206,11 @@
   min-height: 0;
   text-align: left;
   padding: 6px 14px;
-  /* Закругление и контур слева, справа контакт с тетрадкой без бордера */
+
   border-radius: var(--dossier-radius-tab) 0 0 var(--dossier-radius-tab);
   border-top: 2px solid var(--dossier-border-strong);
   border-bottom: 2px solid var(--dossier-border-strong);
-  border-left: 3px solid var(--dossier-border-strong); /* Выделенный контур к левому краю */
+  border-left: 3px solid var(--dossier-border-strong);
   border-right: none;
   background-color: var(--dossier-tab-inactive-bg);
   color: var(--dossier-tab-inactive-text);
@@ -270,7 +254,7 @@
   background-color: var(--dossier-tab-hover-bg);
 }
 
-/* Активный корешок: БЕЗ отступа влево, четкое выделение цветом */
+
 .theme-dossier .cv-nav-tab.active {
   background-color: var(--dossier-accent);
   color: var(--dossier-accent-ink);
@@ -278,7 +262,7 @@
   border-bottom-color: var(--dossier-border-strong);
   border-left-color: var(--dossier-border-strong);
   border-right: none;
-  transform: none; /* Убран отступ влево */
+  transform: none;
   width: 100%;
   font-weight: 700;
   z-index: 3;
@@ -288,9 +272,7 @@
   opacity: 0.95;
 }
 
-/* ==========================================================================
-   5. MAIN CONTENT / PAPER SHEET (Лист тетрадки)
-   ========================================================================== */
+
 .theme-dossier .cv-main {
   background-color: var(--dossier-paper-bg);
   border: 2px solid var(--dossier-border-strong);
@@ -334,9 +316,7 @@
   color: var(--dossier-ink-muted);
 }
 
-/* ==========================================================================
-   6. PROFILE PERSONNEL FILE CARD
-   ========================================================================== */
+
 .theme-dossier .cv-profile-card {
   background-color: var(--dossier-card-bg);
   border: 1.5px solid var(--dossier-border-strong);
@@ -401,7 +381,7 @@
   word-break: break-word;
 }
 
-/* Contacts as classified channels - Column layout */
+
 .theme-dossier .cv-profile-contacts {
   display: flex;
   flex-direction: column;
@@ -461,9 +441,7 @@
   text-decoration: underline;
 }
 
-/* ==========================================================================
-   7. TIMELINE & SECTION CARDS
-   ========================================================================== */
+
 .theme-dossier .cv-timeline {
   position: relative;
   padding-left: 28px;
@@ -514,7 +492,7 @@
   transform: scale(1.3);
 }
 
-/* Section Card */
+
 .theme-dossier .cv-section-card {
   background-color: var(--dossier-card-bg);
   border: 1.5px solid var(--dossier-border-strong);
@@ -593,9 +571,7 @@
   position: relative;
 }
 
-/* ==========================================================================
-   8. FOOTER REGISTER MARKS
-   ========================================================================== */
+
 .theme-dossier .cv-main-footer {
   margin-top: 28px;
   padding-top: 14px;
@@ -617,11 +593,24 @@
   white-space: nowrap;
 }
 
-/* ==========================================================================
-   9. RESPONSIVE BREAKPOINTS (Mobile & Tablet)
-   ========================================================================== */
+.theme-dossier .cv-block-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
 
-/* Tablet (769px - 920px) */
+.theme-dossier .cv-chip-group {
+  font-family: var(--dossier-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background-color: var(--dossier-subtle-bg);
+  border: 1px solid var(--dossier-border-medium);
+  color: var(--dossier-ink-secondary);
+}
+
 @media (max-width: 920px) and (min-width: 769px) {
   .theme-dossier .cv-layout {
     grid-template-columns: 160px minmax(0, 1fr);
@@ -637,7 +626,7 @@
   }
 }
 
-/* Mobile & Small Screens (<= 768px): Корешки гарантированно внутри экрана */
+
 @media (max-width: 768px) {
   .theme-dossier {
     padding: 8px 4px;
@@ -668,14 +657,14 @@
     display: none;
   }
 
-  /* Сетка на мобилке */
+
   .theme-dossier .cv-layout {
     grid-template-columns: 44px minmax(0, 1fr);
     gap: 0;
     align-items: start;
   }
 
-  /* Левый спайн: растянут точно на всю высоту экрана за вычетом шапки */
+
   .theme-dossier .cv-nav {
     position: sticky;
     top: 8px;
@@ -683,7 +672,7 @@
     max-height: calc(100dvh - 140px);
     min-height: 280px;
     z-index: 1;
-    margin-right: -2px; /* Входит под лист тетрадки */
+    margin-right: -2px;
     box-sizing: border-box;
   }
 
@@ -704,7 +693,7 @@
     box-sizing: border-box;
   }
 
-  /* Вертикальный корешок с контуром слева и номером в один ряд */
+
   .theme-dossier .cv-nav-tab {
     width: 44px;
     height: 100%;
@@ -714,7 +703,7 @@
     border-radius: 10px 0 0 10px;
     border-top: 1.5px solid var(--dossier-border-strong);
     border-bottom: 1.5px solid var(--dossier-border-strong);
-    border-left: 2.5px solid var(--dossier-border-strong); /* Четкий контур к левому краю */
+    border-left: 2.5px solid var(--dossier-border-strong);
     border-right: none;
     background-color: var(--dossier-tab-inactive-bg);
     color: var(--dossier-tab-inactive-text);
@@ -760,7 +749,7 @@
     background-color: var(--dossier-tab-hover-bg);
   }
 
-  /* Активный корешок на мобилке: БЕЗ отступа влево, только заливка и контур */
+
   .theme-dossier .cv-nav-tab.active {
     background-color: var(--dossier-accent);
     color: var(--dossier-accent-ink);
@@ -768,14 +757,14 @@
     border-bottom-color: var(--dossier-border-strong);
     border-left-color: var(--dossier-border-strong);
     border-right: none;
-    transform: rotate(180deg); /* Убран отступ влево */
+    transform: rotate(180deg);
     width: 44px;
     box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.2);
     font-weight: 800;
     z-index: 3;
   }
 
-  /* Лист тетрадки справа (поверх корешков) */
+
   .theme-dossier .cv-main {
     padding: 14px 10px;
     border-radius: 0 8px 8px 8px;
@@ -794,7 +783,7 @@
     font-size: 15px;
   }
 
-  /* Профиль на мобилке */
+
   .theme-dossier .cv-profile-card {
     padding: 12px 10px;
   }
@@ -821,7 +810,7 @@
     font-weight: 600;
   }
 
-  /* Контакты на мобилке */
+
   .theme-dossier .cv-contact-chip {
     padding: 8px 10px;
     font-size: 12px;
@@ -834,7 +823,7 @@
     font-size: 12px;
   }
 
-  /* Таймлайн на мобилке */
+
   .theme-dossier .cv-timeline {
     padding-left: 18px;
   }
@@ -876,4 +865,6 @@
     padding-left: 14px;
     font-size: 11px;
   }
+
+
 }

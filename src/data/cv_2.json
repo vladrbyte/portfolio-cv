@@ -472,48 +472,132 @@
       "items": [
         {
           "id": "novasoft",
-          "title": "Novasoft",
-          "subtitle": {
-            "de": "SEO & Online-Marketing",
-            "en": "SEO & Online Marketing"
-          },
-          "period": "05.2017 - 10.2017",
-          "description": {
-            "de": "Suchmaschinenoptimierung und Marketing-Aktivitäten.",
-            "en": "Search engine optimization and marketing activities."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Novasoft"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "SEO & Online-Marketing",
+                "en": "SEO & Online Marketing"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "05.2017 - 10.2017"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Suchmaschinenoptimierung und Marketing-Aktivitäten.",
+                    "en": "Search engine optimization and marketing activities."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "autojack",
-          "title": "Autojack Nürnberg",
-          "subtitle": {
-            "de": "Vertriebsmitarbeiter",
-            "en": "Sales Representative"
-          },
-          "period": "09.2014 - 02.2016",
-          "description": {
-            "de": "Kundenberatung und Vertrieb im Fahrzeugbereich.",
-            "en": "Customer consulting and sales in the automotive sector."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Autojack Nürnberg"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Vertriebsmitarbeiter",
+                "en": "Sales Representative"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "09.2014 - 02.2016"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Kundenberatung und Vertrieb im Fahrzeugbereich.",
+                    "en": "Customer consulting and sales in the automotive sector."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "self_employed",
-          "title": {
-            "de": "Selbständige Tätigkeiten",
-            "en": "Freelance Activities"
-          },
-          "subtitle": {
-            "de": "Beratung und Vertrieb",
-            "en": "Consulting and Sales"
-          },
-          "period": "04.2004 - 09.2014",
-          "description": {
-            "de": "Freiberufliche Tätigkeiten in den Bereichen Beratung und Kundenbetreuung.",
-            "en": "Freelance activities in consulting and customer support."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": {
+                "de": "Selbständige Tätigkeiten",
+                "en": "Freelance Activities"
+              }
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Beratung und Vertrieb",
+                "en": "Consulting and Sales"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "04.2004 - 09.2014"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Freiberufliche Tätigkeiten in den Bereichen Beratung und Kundenbetreuung.",
+                    "en": "Freelance activities in consulting and customer support."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         }
       ]
     },
@@ -526,98 +610,294 @@
       "items": [
         {
           "id": "iu_akademie",
-          "title": "IU Akademie",
-          "subtitle": "AI Engineering & Voice Assistant",
-          "period": "22.12.2025 - 19.06.2026",
-          "description": {
-            "de": "Weiterbildung im Bereich KI-Engineering und Sprachassistenten.",
-            "en": "Further education in AI Engineering and Voice Assistants."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "IU Akademie"
+            },
+            {
+              "type": "subtitle",
+              "value": "AI Engineering & Voice Assistant"
+            },
+            {
+              "type": "badge",
+              "value": "22.12.2025 - 19.06.2026"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Weiterbildung im Bereich KI-Engineering und Sprachassistenten.",
+                    "en": "Further education in AI Engineering and Voice Assistants."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "lutz_grub",
-          "title": "Lutz & Grub AG Nürnberg",
-          "subtitle": {
-            "de": "Fachinformatiker Anwendungsentwicklung",
-            "en": "IT Specialist for Application Development (IHK)"
-          },
-          "period": "11.2017 - 12.2020",
-          "description": {
-            "de": "Duale Ausbildung mit IHK-Abschluss.",
-            "en": "Dual vocational training with IHK certificate."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Lutz & Grub AG Nürnberg"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Fachinformatiker Anwendungsentwicklung",
+                "en": "IT Specialist for Application Development (IHK)"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "11.2017 - 12.2020"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Duale Ausbildung mit IHK-Abschluss.",
+                    "en": "Dual vocational training with IHK certificate."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "uni_erlangen",
-          "title": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
-          "subtitle": {
-            "de": "Rechtswissenschaft & Geschichte",
-            "en": "Law & History"
-          },
-          "period": "10.2010 - 02.2012",
-          "description": {
-            "de": "Universitätsstudium.",
-            "en": "University studies."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Friedrich-Alexander-Universität Erlangen-Nürnberg"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Rechtswissenschaft & Geschichte",
+                "en": "Law & History"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "10.2010 - 02.2012"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Universitätsstudium.",
+                    "en": "University studies."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "abendgymnasium",
-          "title": "Abendgymnasium Nürnberg",
-          "subtitle": {
-            "de": "Allgemeine Hochschulreife (Abitur)",
-            "en": "General Higher Education Entrance Qualification (Abitur)"
-          },
-          "period": "09.2007 - 06.2010",
-          "description": {
-            "de": "Erwerb der allgemeinen Hochschulreife.",
-            "en": "Acquisition of general university entrance qualification."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Abendgymnasium Nürnberg"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Allgemeine Hochschulreife (Abitur)",
+                "en": "General Higher Education Entrance Qualification (Abitur)"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "09.2007 - 06.2010"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Erwerb der allgemeinen Hochschulreife.",
+                    "en": "Acquisition of general university entrance qualification."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "boeckler_realschule",
-          "title": "Hans-Böckler-Realschule",
-          "subtitle": {
-            "de": "Mittlere Reife",
-            "en": "Intermediate School Certificate (Mittlere Reife)"
-          },
-          "period": "09.2006 - 06.2007",
-          "description": {
-            "de": "Realschulabschluss.",
-            "en": "Secondary school certificate."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Hans-Böckler-Realschule"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Mittlere Reife",
+                "en": "Intermediate School Certificate (Mittlere Reife)"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "09.2006 - 06.2007"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Realschulabschluss.",
+                    "en": "Secondary school certificate."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "helene_lange_gymnasium",
-          "title": "Helene-Lange-Gymnasium",
-          "subtitle": {
-            "de": "Gymnasiale Ausbildung",
-            "en": "Secondary School Education"
-          },
-          "period": "09.2003 - 07.2006",
-          "description": {
-            "de": "Schulausbildung.",
-            "en": "Secondary school education."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Helene-Lange-Gymnasium"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Gymnasiale Ausbildung",
+                "en": "Secondary School Education"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "09.2003 - 07.2006"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Schulausbildung.",
+                    "en": "Secondary school education."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "school_dnipro",
-          "title": "Secondary School No. 144, Dnipro",
-          "subtitle": {
-            "de": "Schulausbildung",
-            "en": "Primary & Secondary School"
-          },
-          "period": "09.1994 - 06.2003",
-          "description": {
-            "de": "Grund- und Sekundarschulausbildung in der Ukraine.",
-            "en": "Primary and secondary education in Ukraine."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Secondary School No. 144, Dnipro"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Schulausbildung",
+                "en": "Primary & Secondary School"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "09.1994 - 06.2003"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Grund- und Sekundarschulausbildung in der Ukraine.",
+                    "en": "Primary and secondary education in Ukraine."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         }
       ]
     },
@@ -630,59 +910,184 @@
       "items": [
         {
           "id": "skill_ai",
-          "title": {
-            "de": "KI-Systeme",
-            "en": "AI Systems"
-          },
-          "subtitle": {
-            "de": "Spezialisierung",
-            "en": "Specialization"
-          },
-          "description": {
-            "de": "Erfahrung mit AI Engineering, Prompting und Voice Assistant Integration.",
-            "en": "Experience with AI Engineering, Prompting and Voice Assistant Integration."
-          },
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": {
+                "de": "KI-Systeme",
+                "en": "AI Systems"
+              }
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Spezialisierung",
+                "en": "Specialization"
+              }
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Erfahrung mit AI Engineering, Prompting und Voice Assistant Integration.",
+                    "en": "Experience with AI Engineering, Prompting and Voice Assistant Integration."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "skill_scripting",
-          "title": "Programming & Scripting",
-          "subtitle": {
-            "de": "Sprachen & Laufzeiten",
-            "en": "Languages & Runtimes"
-          },
-          "description": "JavaScript, TypeScript, Python, Kotlin, PHP, C, Dart",
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Programming & Scripting"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Sprachen & Laufzeiten",
+                "en": "Languages & Runtimes"
+              }
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": "JavaScript, TypeScript, Python, Kotlin, PHP, C, Dart"
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "skill_frameworks",
-          "title": "Frameworks & Libraries",
-          "subtitle": {
-            "de": "Frontend & Mobile",
-            "en": "Frontend & Mobile"
-          },
-          "description": "Vue.js, React, Next.js, Jetpack Compose, Node.js, Angular, Flutter, Gradio, Redux",
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Frameworks & Libraries"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Frontend & Mobile",
+                "en": "Frontend & Mobile"
+              }
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": "Vue.js, React, Next.js, Jetpack Compose, Node.js, Angular, Flutter, Gradio, Redux"
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "skill_styles",
-          "title": "Markup & Styles",
-          "subtitle": {
-            "de": "Layout & Styling",
-            "en": "Layout & Styling"
-          },
-          "description": "HTML5, CSS3, SCSS, Bootstrap, Quasar, Ionic, XML",
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Markup & Styles"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Layout & Styling",
+                "en": "Layout & Styling"
+              }
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": "HTML5, CSS3, SCSS, Bootstrap, Quasar, Ionic, XML"
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "skill_databases",
-          "title": "Databases",
-          "subtitle": {
-            "de": "Datenhaltung",
-            "en": "Data Storage"
-          },
-          "description": "SQL, MySQL, MongoDB",
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": "Databases"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Datenhaltung",
+                "en": "Data Storage"
+              }
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": "SQL, MySQL, MongoDB"
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         }
       ]
     },
@@ -695,43 +1100,97 @@
       "items": [
         {
           "id": "leisure_hobbies",
-          "title": {
-            "de": "Hobbies & Interessen",
-            "en": "Hobbies & Interests"
-          },
-          "subtitle": {
-            "de": "Freizeit",
-            "en": "Leisure"
-          },
-          "description": "Pub-Quiz, Magic: The Gathering (MTG), Dungeons & Dragons (D&D)",
-          "bullets": []
+          "header": [
+            {
+              "type": "title",
+              "value": {
+                "de": "Hobbies & Interessen",
+                "en": "Hobbies & Interests"
+              }
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Freizeit",
+                "en": "Leisure"
+              }
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": "Pub-Quiz, Magic: The Gathering (MTG), Dungeons & Dragons (D&D)"
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         },
         {
           "id": "leisure_community",
-          "title": {
-            "de": "Ehrenamt & Moderation",
-            "en": "Volunteering & Moderation"
-          },
-          "subtitle": {
-            "de": "Soziales Engagement",
-            "en": "Community Involvement"
-          },
-          "description": {
-            "de": "Aktive Teilnahme an kulturellen und sozialen Projekten.",
-            "en": "Active participation in cultural and social projects."
-          },
-          "bullets": {
-            "de": [
-              "Orga-Team Ostanders-Festival",
-              "Moderation von Russian Poetry Slam",
-              "Unterrichten bei Chabad Nürnberg für Senioren und Jugendliche"
-            ],
-            "en": [
-              "Organization team for Ostanders Festival",
-              "Host / Moderation of Russian Poetry Slam",
-              "Teaching seniors and youth at Chabad Nuremberg"
-            ]
-          }
+          "header": [
+            {
+              "type": "title",
+              "value": {
+                "de": "Ehrenamt & Moderation",
+                "en": "Volunteering & Moderation"
+              }
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Soziales Engagement",
+                "en": "Community Involvement"
+              }
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Aktive Teilnahme an kulturellen und sozialen Projekten.",
+                    "en": "Active participation in cultural and social projects."
+                  }
+                },
+                {
+                  "type": "bullets",
+                  "value": {
+                    "de": [
+                      "Orga-Team Ostanders-Festival",
+                      "Moderation von Russian Poetry Slam",
+                      "Unterrichten bei Chabad Nürnberg für Senioren und Jugendliche"
+                    ],
+                    "en": [
+                      "Organization team for Ostanders Festival",
+                      "Host / Moderation of Russian Poetry Slam",
+                      "Teaching seniors and youth at Chabad Nuremberg"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
+          ]
         }
       ]
     }
