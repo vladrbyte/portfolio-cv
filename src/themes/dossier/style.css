@@ -497,7 +497,7 @@
   background-color: var(--dossier-card-bg);
   border: 1.5px solid var(--dossier-border-strong);
   border-radius: var(--dossier-radius-card);
-  padding: 18px 20px;
+  padding-top: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   transition: all 0.2s ease;
   word-break: break-word;
@@ -517,6 +517,7 @@
 }
 
 .theme-dossier .cv-card-title-group {
+  padding-left: 12px;
   min-width: 0;
   flex: 1;
 }
@@ -609,6 +610,84 @@
   background-color: var(--dossier-subtle-bg);
   border: 1px solid var(--dossier-border-medium);
   color: var(--dossier-ink-secondary);
+}
+
+.theme-dossier .cv-pager {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.theme-dossier .cv-pager-body {
+  display: grid;
+  grid-template-columns: 0px minmax(0, 1fr) 0px;
+  align-items: center;
+  gap: 0;
+}
+
+.theme-dossier .cv-pager-viewport {
+  min-width: 0;
+}
+
+.theme-dossier .cv-pager-arrow {
+  display: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--dossier-border-strong);
+  background-color: var(--dossier-card-bg);
+  color: var(--dossier-ink);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-dossier .cv-pager-body {
+    grid-template-columns: 32px minmax(0, 1fr) 32px;
+  }
+
+  .theme-dossier .cv-pager-arrow {
+    display: flex;
+  }
+}
+
+.theme-dossier .cv-pager-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.theme-dossier .cv-pager-arrow-left {
+  justify-self: start;
+}
+
+.theme-dossier .cv-pager-arrow-right {
+  justify-self: end;
+}
+
+.theme-dossier .cv-pager-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+  padding-bottom: 10px;
+}
+
+.theme-dossier .cv-pager-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--dossier-border-strong);
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.theme-dossier .cv-pager-dot.active {
+  background-color: var(--dossier-accent);
+  border-color: var(--dossier-accent);
 }
 
 @media (max-width: 920px) and (min-width: 769px) {
@@ -764,7 +843,6 @@
     z-index: 3;
   }
 
-
   .theme-dossier .cv-main {
     padding: 14px 10px;
     border-radius: 0 8px 8px 8px;
@@ -865,6 +943,4 @@
     padding-left: 14px;
     font-size: 11px;
   }
-
-
 }

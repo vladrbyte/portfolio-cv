@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
   block: { type: Object, required: true }
 })
 
@@ -12,9 +12,9 @@ const blockMap = {
   chips:    { tag: 'div',  class: 'cv-block-chips',   itemTag: 'span', itemClass: 'cv-chip-group' }
 }
 
-const config = blockMap[block.type] || null
+const config = blockMap[props.block.type] || null
 
-const items = Array.isArray(block.value) ? block.value : null
+const items = Array.isArray(props.block.value) ? props.block.value : null
 </script>
 
 <template>
@@ -30,7 +30,7 @@ const items = Array.isArray(block.value) ? block.value : null
       </component>
     </template>
     <template v-else>
-      {{ block.value }}
+      {{ props.block.value }}
     </template>
   </component>
 </template>

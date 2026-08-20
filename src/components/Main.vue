@@ -1,6 +1,6 @@
 <script setup>
-import { decor } from '../composables/constants'
-
+import Block from './Block.vue'
+import ScreenPager from './ScreenPager.vue'
 
 defineProps({
   activeSection: {
@@ -79,20 +79,23 @@ defineProps({
           <div class="cv-card cv-section-card">
             <div class="cv-card-header">
               <div class="cv-card-title-group">
-                <h3 v-if="item.title" class="cv-item-title">{{ item.title }}</h3>
-                <p v-if="item.subtitle" class="cv-item-subtitle">{{ item.subtitle }}</p>
+                <Block
+                  v-for="(block, bIndex) in item.header.filter(b => b.type !== 'badge')"
+                  :key="bIndex"
+                  :block="block"
+                />
               </div>
 
-              <span v-if="item.period" class="cv-item-period">{{ item.period }}</span>
+              <Block
+                v-for="(block, bIndex) in item.header.filter(b => b.type === 'badge')"
+                :key="bIndex"
+                :block="block"
+              />
             </div>
 
             <p v-if="item.description" class="cv-item-description">{{ item.description }}</p>
 
-            <ul v-if="item.bullets && item.bullets.length" class="cv-item-bullets">
-              <li v-for="(bullet, bIndex) in item.bullets" :key="bIndex">
-                {{ bullet }}
-              </li>
-            </ul>
+            <ScreenPager v-if="item.screens" :screens="item.screens" />
           </div>
         </div>
       </div>
