@@ -88,121 +88,377 @@
       "items": [
         {
           "id": "vjik_dev",
-          "title": "vjik dev",
-          "subtitle": {
-            "de": "App- & Webentwicklung",
-            "en": "App & Web Development"
-          },
-          "period": {
-            "de": "01.2025 - jetzt",
-            "en": "01.2025 - present"
-          },
-          "description": {
-            "de": "Selbständige Entwicklung von mobilen Anwendungen und Webprojekten.",
-            "en": "Independent development of mobile applications and web projects."
-          },
-          "bullets": {
-            "de": [
-              "Entwicklung der Android-App Pictl (OCR Foto-zu-Kalender) mit Kotlin und ML Kit",
-              "Erstellung von Web-Dashboards und Tools mit Vue.js und React"
-            ],
-            "en": [
-              "Development of Pictl Android app (OCR photo-to-calendar) using Kotlin and ML Kit",
-              "Building web dashboards and tools with Vue.js and React"
-            ]
-          },
-          "stack": [
-            "Kotlin, JetPack Compose, Python",
-            "Vue.js, React, Node.js, Gradio"
+          "header": [
+            {
+              "type": "title",
+              "value": "vjik dev"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "App- & Webentwicklung",
+                "en": "App & Web Development"
+              }
+            },
+            {
+              "type": "badge",
+              "value": {
+                "de": "01.2025 - jetzt",
+                "en": "01.2025 - present"
+              }
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Selbständige Entwicklung von mobilen Anwendungen und Webprojekten.",
+                    "en": "Independent development of mobile applications and web projects."
+                  }
+                },
+                {
+                  "type": "bullets",
+                  "value": {
+                    "de": [
+                      "Entwicklung der Android-App Pictl (OCR Foto-zu-Kalender) mit Kotlin und ML Kit",
+                      "Erstellung von Web-Dashboards und Tools mit Vue.js und React"
+                    ],
+                    "en": [
+                      "Development of Pictl Android app (OCR photo-to-calendar) using Kotlin and ML Kit",
+                      "Building web dashboards and tools with Vue.js and React"
+                    ]
+                  }
+                },
+                {
+                  "type": "chips",
+                  "value": [
+                    [
+                      "Kotlin",
+                      "JetPack Compose",
+                      "Python",
+                      "Flutter",
+                      "Dart"
+                    ],
+                    [
+                      "Vue.js",
+                      "React",
+                      "Node.js",
+                      "Gradio"
+                    ],
+                    [
+                      "Android Studio",
+                      "VS Code",
+                      "Antigravity",
+                      "Git"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
           ]
         },
         {
           "id": "tani_gmbh",
-          "title": "Tani GmbH",
-          "subtitle": {
-            "de": "Fullstack-Entwicklung",
-            "en": "Fullstack Development"
-          },
-          "period": "04.2022 - 12.2024",
-          "description": {
-            "de": "Entwicklung und Wartung von Webanwendungen und Schnittstellen.",
-            "en": "Development and maintenance of web applications and interfaces."
-          },
-          "bullets": [],
-          "stack": [
-            "Vanille Javascript, PHP, Websockets, C ",
-            "jQuery, mustache.js, HTML5, CSS3"
+          "header": [
+            {
+              "type": "title",
+              "value": "Tani GmbH"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Fullstack-Entwicklung",
+                "en": "Fullstack Development"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "04.2022 - 12.2024"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Entwicklung und Wartung von Webanwendungen und Schnittstellen.",
+                    "en": "Development and maintenance of web applications and interfaces."
+                  }
+                },
+                {
+                  "type": "chips",
+                  "value": [
+                    [
+                      "Vanille Javascript",
+                      "PHP",
+                      "Websockets",
+                      "C"
+                    ],
+                    [
+                      "jQuery",
+                      "mustache.js",
+                      "HTML5",
+                      "CSS3"
+                    ],
+                    [
+                      "Linux",
+                      "Wireshark",
+                      "VS Code",
+                      "Git"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
           ]
         },
         {
           "id": "krola_consulting",
-          "title": "Krola Consulting GmbH",
-          "subtitle": {
-            "de": "Frontend-Entwicklung",
-            "en": "Frontend Development"
-          },
-          "period": "06.2021 - 04.2022",
-          "description": {
-            "de": "Umsetzung von Benutzeroberflächen und Frontend-Komponenten.",
-            "en": "Implementation of user interfaces and frontend components."
-          },
-          "bullets": [],
-          "stack": [
-            "Vanille Javascript, PHP, Typescript ",
-            "jQuery, Angular, HTML5, CSS3"
+          "header": [
+            {
+              "type": "title",
+              "value": "Krola Consulting GmbH"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Frontend-Entwicklung",
+                "en": "Frontend Development"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "06.2021 - 04.2022"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Umsetzung von Benutzeroberflächen und Frontend-Komponenten.",
+                    "en": "Implementation of user interfaces and frontend components."
+                  }
+                },
+                {
+                  "type": "chips",
+                  "value": [
+                    [
+                      "Vanille Javascript",
+                      "PHP",
+                      "Typescript"
+                    ],
+                    [
+                      "jQuery",
+                      "Angular",
+                      "HTML5",
+                      "CSS3"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
           ]
         },
         {
           "id": "dfk_nuernberg",
-          "title": "DFK Nürnberg",
-          "subtitle": {
-            "de": "IT-Abteilung (Intern)",
-            "en": "IT Department (Internal)"
-          },
-          "period": "03.2021 - 06.2021",
-          "description": {
-            "de": "Interne IT-Betreuung und Systemunterstützung.",
-            "en": "Internal IT support and system maintenance."
-          },
-          "bullets": [],
-          "stack": [
-            "Office 365, Sharepoint, Windows Server, Active Directory"
+          "header": [
+            {
+              "type": "title",
+              "value": "DFK Nürnberg"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "IT-Abteilung (Intern)",
+                "en": "IT Department (Internal)"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "03.2021 - 06.2021"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Interne IT-Betreuung und Systemunterstützung.",
+                    "en": "Internal IT support and system maintenance."
+                  }
+                },
+                {
+                  "type": "chips",
+                  "value": [
+                    [
+                      "Office 365",
+                      "Sharepoint",
+                      "Windows Server",
+                      "Active Directory"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
           ]
         },
         {
           "id": "la_drucksofa",
-          "title": "LA Drucksofa",
-          "subtitle": {
-            "de": "Fullstack-Entwicklung",
-            "en": "Fullstack Development"
-          },
-          "period": "01.2021 - 03.2021",
-          "description": {
-            "de": "Webentwicklung und Betreuung von Druck- und E-Commerce-Systemen.",
-            "en": "Web development and maintenance of print and e-commerce systems."
-          },
-          "bullets": [],
-          "stack": [
-            "Vanille Javascript, PHP",
-            "jQuery, WordPress, HTML5, CSS3"
+          "header": [
+            {
+              "type": "title",
+              "value": "LA Drucksofa"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Fullstack-Entwicklung",
+                "en": "Fullstack Development"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "01.2021 - 03.2021"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Webentwicklung und Betreuung von Druck- und E-Commerce-Systemen.",
+                    "en": "Web development and maintenance of print and e-commerce systems."
+                  }
+                },
+                {
+                  "type": "chips",
+                  "value": [
+                    [
+                      "Vanille Javascript",
+                      "PHP"
+                    ],
+                    [
+                      "jQuery",
+                      "WordPress",
+                      "HTML5",
+                      "CSS3"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
           ]
         },
         {
           "id": "kleinoeder_dev",
-          "title": "Kleinoeder-Development",
-          "subtitle": {
-            "de": "Praktikum als Web- und App-Entwickler",
-            "en": "Internship as Web & App Developer"
-          },
-          "period": "02.2019 - 12.2019",
-          "description": {
-            "de": "Praktikum während der Ausbildung mit Fokus auf Web- und App-Projekte.",
-            "en": "Internship during vocational training focused on web and app projects."
-          },
-          "bullets": [],
-          "stack": [
-            "Vanille Javascript, PHP, Typescript ",
-            "jQuery, Angular, Ionic, Quasar, HTML5, CSS3"
+          "header": [
+            {
+              "type": "title",
+              "value": "Kleinoeder-Development"
+            },
+            {
+              "type": "subtitle",
+              "value": {
+                "de": "Praktikum als Web- und App-Entwickler",
+                "en": "Internship as Web & App Developer"
+              }
+            },
+            {
+              "type": "badge",
+              "value": "02.2019 - 12.2019"
+            }
+          ],
+          "screens": [
+            {
+              "id": "1",
+              "blocks": [
+                {
+                  "type": "text",
+                  "value": {
+                    "de": "Praktikum während der Ausbildung mit Fokus auf Web- und App-Projekte.",
+                    "en": "Internship during vocational training focused on web and app projects."
+                  }
+                },
+                {
+                  "type": "chips",
+                  "value": [
+                    [
+                      "Javascript",
+                      "PHP",
+                      "Typescript"
+                    ],
+                    [
+                      "jQuery",
+                      "Angular",
+                      "Ionic",
+                      "Quasar",
+                      "HTML5",
+                      "CSS3"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "blocks": []
+            },
+            {
+              "id": "3",
+              "blocks": []
+            }
           ]
         }
       ]

@@ -29,9 +29,6 @@ defineProps({
     </div>
 
     <div v-if="activeSection.isProfile" class="cv-card cv-profile-card">
-      <div class="cv-card-corner top-left">{{ decor.regMark }}</div>
-      <div class="cv-card-corner top-right">{{ decor.regMark }}</div>
-
       <div v-if="Array.isArray(activeSection.info)" class="cv-profile-grid">
         <div 
           v-for="field in activeSection.info" 
@@ -102,11 +99,9 @@ defineProps({
     </div>
 
     <div class="cv-main-footer">
-      <span class="cv-reg-mark">{{ decor.regMark }}</span>
       <span class="cv-footer-code">
-        {{ themeStrings.pageRef }} {{decor.doubleSectionDivider}} {{ (profile?.fullname || 'CV').toUpperCase() }}-{{ activeSection.index }}
+        {{ (profile?.fullname || 'CV').toUpperCase() }} - {{ activeSection.index }}
       </span>
-      <span class="cv-reg-mark">{{ decor.regMark }}</span>
     </div>
   </main>
 </template>
